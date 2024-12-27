@@ -1,5 +1,5 @@
-import Header from "@/components/header/Navbar";
-import Footer from "@/components/header/Footer";
+import Header from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import CarCategories from "@/components/widgets/home/CarCategories";
 import PopularCars from "@/components/widgets/home/PopularCars";
 import WhyChooseUs from "@/components/widgets/home/WhyChooseUs";
