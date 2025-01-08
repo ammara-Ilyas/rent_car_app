@@ -1,30 +1,26 @@
-// components/BookingSummary.jsx
-import { Button } from "@mui/material";
+import React from "react";
 
-export default function BookingSummary() {
+const BookingSummary = () => {
   return (
-    <div className="border p-4 rounded shadow-lg">
-      <h2 className="text-xl font-semibold mb-2">Location: Japan</h2>
-      <p className="text-gray-600">Start Date: 10 Aug 2023</p>
-      <p className="text-gray-600">End Date: 14 Aug 2023</p>
-      <div className="my-4">
-        <p className="font-bold">Booking Summary</p>
-        <div className="flex justify-between text-gray-600">
-          <span>Rental Charges (5 days):</span>
-          <span>¥100,000</span>
+    <div className="bg-white shadow-md rounded-lg ">
+      <h2 className="text-lg font-bold bg-black text-white py-2 px-4 rounded-t-lg">
+        Location: Jaipur
+      </h2>
+      <div className="flex justify-between font-semibold mb-4 p-4">
+        <div>
+          <div className="text-sm text-gray-500">Sat, 05 Aug 2023</div>
+          <div className="text-base font-medium">09:30 AM</div>
         </div>
-        <div className="flex justify-between text-gray-600">
-          <span>Taxes and Charges:</span>
-          <span>¥5,000</span>
+        <div className=" rounded-full font-medium bg-black text-white px-3 flex justify-center items-center  ">
+          To
         </div>
-        <div className="flex justify-between font-bold">
-          <span>Total:</span>
-          <span>¥125,000</span>
+        <div>
+          <div className="text-sm text-gray-500">Tue, 08 Aug 2023</div>
+          <div className="text-base font-medium">06:30 PM</div>
         </div>
       </div>
-      <Button variant="contained" color="primary" fullWidth>
-        Proceed
-      </Button>
     </div>
   );
-}
+};
+
+export default BookingSummary;

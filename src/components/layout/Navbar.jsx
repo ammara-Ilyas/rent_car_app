@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between p-4 shadow-md bg-white">
+    <nav className="flex items-center px-16 justify-evenly p-4 shadow-md bg-black bg-opacity-10">
       {/* Logo */}
-      <div className="text-2xl font-bold text-black">
+      <div className="text-2xl font-bold bg-white p-2 rounded px-3 text-black">
         <span className="text-red-500">R</span>umble
       </div>
 
@@ -16,7 +16,7 @@ const Navbar = () => {
             <Link
               key={i}
               href={page}
-              className="px-4 py-2 rounded-md font-semibold capitalize"
+              className="px-4 py-2 text-white active:bg-red-600   rounded-md font-semibold capitalize"
             >
               {page}
             </Link>

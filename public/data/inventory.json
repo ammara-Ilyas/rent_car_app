@@ -1,0 +1,621 @@
+[
+  {
+    "id": 1,
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2022,
+    "brand": "Toyota Camry",
+    "pricePerDay": 50,
+    "pricePerWeek": 300,
+    "pricePerMonth": 1200,
+    "category": "Sedan",
+    "available": true,
+    "segment": "Premium",
+    "tags": ["Kid-friendly"],
+    "images": [
+      "/images/categories/camry_01.avif",
+      "/images/categories/camry_02.avif",
+      "/images/categories/camry_03.avif",
+      "/images/categories/camry_04.avif",
+      "/images/categories/camry_05.avif"
+    ],
+    "description": "A reliable sedan with great fuel economy and comfort. Known for its smooth ride and advanced tech features.",
+    "fuelType": "Petrol",
+    "rating": 4.5,
+    "seatingCapacity": 5,
+    "luggageCapacity": "Medium",
+    "transmission": "Automatic",
+    "location": ["New York", "Boston", "Chicago"],
+    "booking": []
+  },
+  {
+    "id": 2,
+    "make": "Honda",
+    "model": "Civic",
+    "year": 2022,
+    "brand": "Honda Civic",
+    "pricePerDay": 60,
+    "pricePerWeek": 350,
+    "pricePerMonth": 1400,
+    "category": "Sedan",
+    "segment": "Luxury",
+
+    "available": true,
+    "tags": ["Kid-friendly", "Adult-focused"],
+    "images": [
+      "/images/honda_civic_1.jpg",
+      "/images/honda_civic_2.jpg",
+      "/images/honda_civic_3.jpg",
+      "/images/honda_civic_4.jpg",
+      "/images/honda_civic_5.jpg"
+    ],
+    "description": "A sporty sedan with modern features and a sleek design.",
+    "fuelType": "Petrol",
+    "rating": 4.5,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Medium",
+    "transmission": "Automatic",
+    "location": ["San Diego", "Phoenix", "Los Angeles"],
+    "booking": []
+  },
+  {
+    "id": 3,
+    "make": "Tesla",
+    "model": "Model S",
+    "year": 2023,
+    "brand": "Tesla Model S",
+    "pricePerDay": 100,
+    "pricePerWeek": 600,
+    "pricePerMonth": 2500,
+    "category": "Luxury",
+    "segment": "Luxury",
+
+    "available": true,
+    "tags": ["Adult-focused"],
+    "images": [
+      "/images/tesla_model_s_1.jpg",
+      "/images/tesla_model_s_2.jpg",
+      "/images/tesla_model_s_3.jpg",
+      "/images/tesla_model_s_4.jpg",
+      "/images/tesla_model_s_5.jpg"
+    ],
+    "description": "A luxury electric car with cutting-edge technology and high performance.",
+    "fuelType": "Electric",
+    "rating": 4.5,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Large",
+    "transmission": "Automatic",
+    "location": ["San Francisco", "Los Angeles", "San Diego"],
+    "booking": []
+  },
+  {
+    "id": 4,
+    "make": "BMW",
+    "model": "X5",
+    "year": 2022,
+    "brand": "BMW X5",
+    "pricePerDay": 120,
+    "pricePerWeek": 700,
+    "pricePerMonth": 2800,
+    "category": "Luxury SUV",
+    "segment": "Luxury",
+
+    "available": true,
+    "tags": ["Adult-focused"],
+    "images": [
+      "/images/bmw_x5_1.jpg",
+      "/images/bmw_x5_2.jpg",
+      "/images/bmw_x5_3.jpg",
+      "/images/bmw_x5_4.jpg",
+      "/images/bmw_x5_5.jpg"
+    ],
+    "description": "A premium SUV with luxury features and superior performance, perfect for business or leisure.",
+    "fuelType": "Petrol",
+    "rating": 4.5,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Large",
+    "transmission": "Automatic",
+    "location": ["Miami", "Orlando", "Tampa"],
+    "booking": []
+  },
+  {
+    "id": 5,
+    "make": "Chevrolet",
+    "model": "Tahoe",
+    "year": 2022,
+    "brand": "Chevrolet Tahoe",
+    "pricePerDay": 85,
+    "pricePerWeek": 500,
+    "pricePerMonth": 2000,
+    "category": "SUV",
+    "segment": "Compact",
+
+    "available": true,
+    "tags": ["Kid-friendly", "Adult-focused"],
+    "images": [
+      "/images/chevy_tahoe_1.jpg",
+      "/images/chevy_tahoe_2.jpg",
+      "/images/chevy_tahoe_3.jpg",
+      "/images/chevy_tahoe_4.jpg",
+      "/images/chevy_tahoe_5.jpg"
+    ],
+    "description": "A rugged and spacious SUV with a powerful engine and plenty of cargo room.",
+    "fuelType": "Diesel",
+    "rating": 4.5,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Extra Large",
+    "transmission": "Automatic",
+    "location": ["Denver", "Salt Lake City", "Seattle"],
+    "booking": []
+  },
+  {
+    "id": 6,
+    "make": "Jeep",
+    "model": "Wrangler",
+    "year": 2021,
+    "brand": "Jeep Wrangler",
+    "pricePerDay": 100,
+    "pricePerWeek": 600,
+    "pricePerMonth": 2500,
+    "category": "Off-Road",
+    "segment": "Compact",
+
+    "available": true,
+    "tags": ["Adult-focused"],
+    "images": [
+      "/images/jeep_wrangler_1.jpg",
+      "/images/jeep_wrangler_2.jpg",
+      "/images/jeep_wrangler_3.jpg",
+      "/images/jeep_wrangler_4.jpg",
+      "/images/jeep_wrangler_5.jpg"
+    ],
+    "description": "A tough off-road SUV built for adventure, offering durability and power.",
+    "fuelType": "Diesel",
+    "rating": 4.5,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Medium",
+    "transmission": "Manual",
+    "location": ["Denver", "Salt Lake City", "Phoenix"],
+    "booking": []
+  },
+  {
+    "id": 21,
+    "make": "Nissan",
+    "model": "Altima",
+    "year": 2022,
+    "brand": "Nissan Altima",
+    "pricePerDay": 50,
+    "pricePerWeek": 300,
+    "pricePerMonth": 1200,
+    "category": "Sedan",
+    "segment": "Compact",
+
+    "available": true,
+    "tags": ["Kid-friendly"],
+    "images": [
+      "/images/nissan_altima_1.jpg",
+      "/images/nissan_altima_2.jpg",
+      "/images/nissan_altima_3.jpg"
+    ],
+    "description": "A sleek sedan with excellent fuel economy and modern features.",
+    "fuelType": "Petrol",
+    "rating": 4.5,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Medium",
+    "transmission": "Automatic",
+    "location": ["Boston", "New York", "Philadelphia"],
+    "booking": []
+  },
+  {
+    "id": 22,
+    "make": "Mazda",
+    "model": "Mazda3",
+    "year": 2021,
+    "brand": "Mazda Mazda3",
+    "pricePerDay": 45,
+    "pricePerWeek": 270,
+    "pricePerMonth": 1100,
+    "category": "Sedan",
+    "segment": "Economy",
+
+    "available": true,
+    "tags": ["Kid-friendly"],
+    "images": [
+      "/images/mazda3_1.jpg",
+      "/images/mazda3_2.jpg",
+      "/images/mazda3_3.jpg"
+    ],
+    "description": "A compact sedan with sporty styling and responsive handling.",
+    "fuelType": "Petrol",
+    "rating": 4.4,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Small",
+    "transmission": "Automatic",
+    "location": ["Chicago", "Detroit", "Cleveland"],
+    "booking": []
+  },
+  {
+    "id": 23,
+    "make": "Ford",
+    "model": "Escape",
+    "year": 2022,
+    "brand": "Ford Escape",
+    "pricePerDay": 70,
+    "pricePerWeek": 400,
+    "pricePerMonth": 1500,
+    "category": "SUV",
+    "segment": "Economy",
+
+    "available": true,
+    "tags": ["Kid-friendly", "Adult-focused"],
+    "images": [
+      "/images/ford_escape_1.jpg",
+      "/images/ford_escape_2.jpg",
+      "/images/ford_escape_3.jpg"
+    ],
+    "description": "A versatile SUV with excellent cargo space and advanced features.",
+    "fuelType": "Hybrid",
+    "rating": 4.6,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Large",
+    "transmission": "Automatic",
+    "location": ["Dallas", "Houston", "Austin"],
+    "booking": []
+  },
+  {
+    "id": 24,
+    "make": "Kia",
+    "model": "Sorento",
+    "year": 2023,
+    "brand": "Kia Sorento",
+    "pricePerDay": 80,
+    "pricePerWeek": 450,
+    "pricePerMonth": 1700,
+    "category": "SUV",
+    "segment": "Economy",
+
+    "available": true,
+    "tags": ["Kid-friendly"],
+    "images": [
+      "/images/kia_sorento_1.jpg",
+      "/images/kia_sorento_2.jpg",
+      "/images/kia_sorento_3.jpg"
+    ],
+    "description": "A family-friendly SUV with cutting-edge tech and a comfortable ride.",
+    "fuelType": "Petrol",
+    "rating": 4.5,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Extra Large",
+    "transmission": "Automatic",
+    "location": ["Miami", "Orlando", "Atlanta"],
+    "booking": []
+  },
+  {
+    "id": 25,
+    "make": "Chevrolet",
+    "model": "Blazer",
+    "year": 2021,
+    "brand": "Chevrolet Blazer",
+    "pricePerDay": 75,
+    "pricePerWeek": 420,
+    "pricePerMonth": 1600,
+    "category": "SUV",
+    "segment": "Economy",
+
+    "available": true,
+    "tags": ["Adult-focused"],
+    "images": [
+      "/images/chevy_blazer_1.jpg",
+      "/images/chevy_blazer_2.jpg",
+      "/images/chevy_blazer_3.jpg"
+    ],
+    "description": "A mid-sized SUV with sporty looks and plenty of tech features.",
+    "fuelType": "Diesel",
+    "rating": 4.4,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Large",
+    "transmission": "Automatic",
+    "location": ["Seattle", "Portland", "San Francisco"],
+    "booking": []
+  },
+  {
+    "id": 31,
+    "make": "Hyundai",
+    "model": "Santa Fe",
+    "year": 2022,
+    "brand": "Hyundai Santa Fe",
+    "pricePerDay": 75,
+    "pricePerWeek": 450,
+    "pricePerMonth": 1600,
+    "category": "SUV",
+    "segment": "SUV",
+
+    "available": true,
+    "tags": ["Kid-friendly", "Adult-focused"],
+    "images": [
+      "/images/hyundai_santa_fe_1.jpg",
+      "/images/hyundai_santa_fe_2.jpg",
+      "/images/hyundai_santa_fe_3.jpg"
+    ],
+    "description": "A spacious SUV perfect for families, offering excellent comfort and modern safety features.",
+    "fuelType": "Hybrid",
+    "rating": 4.6,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Large",
+    "transmission": "Automatic",
+    "location": ["Atlanta", "Orlando", "Miami"],
+    "booking": []
+  },
+  {
+    "id": 32,
+    "make": "Chevrolet",
+    "model": "Traverse",
+    "year": 2023,
+    "brand": "Chevrolet Traverse",
+    "pricePerDay": 90,
+    "pricePerWeek": 500,
+    "pricePerMonth": 1800,
+    "category": "SUV",
+    "segment": "SUV",
+
+    "available": true,
+    "tags": ["Kid-friendly"],
+    "images": [
+      "/images/chevrolet_traverse_1.jpg",
+      "/images/chevrolet_traverse_2.jpg",
+      "/images/chevrolet_traverse_3.jpg"
+    ],
+    "description": "A reliable SUV with plenty of cargo space, ideal for family road trips.",
+    "fuelType": "Petrol",
+    "rating": 4.5,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Extra Large",
+    "transmission": "Automatic",
+    "location": ["Chicago", "Detroit", "Indianapolis"],
+    "booking": []
+  },
+  {
+    "id": 33,
+    "make": "Porsche",
+    "model": "911",
+    "year": 2023,
+    "brand": "Porsche 911",
+    "pricePerDay": 300,
+    "pricePerWeek": 1800,
+    "pricePerMonth": 7000,
+    "category": "Sports Car",
+    "segment": "SUV",
+
+    "available": true,
+    "tags": ["Adult-focused"],
+    "images": [
+      "/images/porsche_911_1.jpg",
+      "/images/porsche_911_2.jpg",
+      "/images/porsche_911_3.jpg"
+    ],
+    "description": "A high-performance sports car with cutting-edge technology and exceptional handling.",
+    "fuelType": "Petrol",
+    "rating": 4.9,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Small",
+    "transmission": "Automatic",
+    "location": ["Los Angeles", "San Francisco", "Miami"],
+    "booking": []
+  },
+  {
+    "id": 34,
+    "make": "Toyota",
+    "model": "Highlander",
+    "year": 2023,
+    "brand": "Toyota Highlander",
+    "pricePerDay": 85,
+    "pricePerWeek": 500,
+    "pricePerMonth": 1900,
+    "category": "SUV",
+    "segment": "SUV",
+
+    "available": true,
+    "tags": ["Kid-friendly"],
+    "images": [
+      "/images/toyota_highlander_1.jpg",
+      "/images/toyota_highlander_2.jpg",
+      "/images/toyota_highlander_3.jpg"
+    ],
+    "description": "A family-friendly SUV with a spacious interior and advanced safety features.",
+    "fuelType": "Hybrid",
+    "rating": 4.6,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Large",
+    "transmission": "Automatic",
+    "location": ["New York", "Philadelphia", "Boston"],
+    "booking": []
+  },
+  {
+    "id": 35,
+    "make": "Ford",
+    "model": "Mustang",
+    "year": 2023,
+    "brand": "Ford Mustang",
+    "pricePerDay": 120,
+    "pricePerWeek": 750,
+    "pricePerMonth": 3000,
+    "category": "Sports Car",
+    "segment": "Premium",
+
+    "available": true,
+    "tags": ["Adult-focused"],
+    "images": [
+      "/images/ford_mustang_1.jpg",
+      "/images/ford_mustang_2.jpg",
+      "/images/ford_mustang_3.jpg"
+    ],
+    "description": "An iconic sports car offering powerful performance and bold styling.",
+    "fuelType": "Petrol",
+    "rating": 4.8,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Medium",
+    "transmission": "Manual",
+    "location": ["Dallas", "Houston", "Austin"],
+    "booking": []
+  },
+  {
+    "id": 36,
+    "make": "Honda",
+    "model": "CR-V",
+    "year": 2022,
+    "brand": "Honda CR-V",
+    "pricePerDay": 70,
+    "pricePerWeek": 420,
+    "pricePerMonth": 1600,
+    "category": "SUV",
+    "segment": "Premium",
+
+    "available": true,
+    "tags": ["Kid-friendly"],
+    "images": [
+      "/images/honda_crv_1.jpg",
+      "/images/honda_crv_2.jpg",
+      "/images/honda_crv_3.jpg"
+    ],
+    "description": "A compact SUV that balances efficiency with plenty of room for families.",
+    "fuelType": "Petrol",
+    "rating": 4.6,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Large",
+    "transmission": "Automatic",
+    "location": ["Los Angeles", "San Diego", "Phoenix"],
+    "booking": []
+  },
+  {
+    "id": 37,
+    "make": "Mercedes-Benz",
+    "model": "GLC",
+    "year": 2023,
+    "brand": "Mercedes-Benz GLC",
+    "pricePerDay": 180,
+    "pricePerWeek": 1000,
+    "pricePerMonth": 4000,
+    "category": "Luxury SUV",
+    "segment": "Premium",
+
+    "available": true,
+    "tags": ["Adult-focused"],
+    "images": [
+      "/images/mercedes_glc_1.jpg",
+      "/images/mercedes_glc_2.jpg",
+      "/images/mercedes_glc_3.jpg"
+    ],
+    "description": "A luxury SUV that blends style with cutting-edge technology and comfort.",
+    "fuelType": "Diesel",
+    "rating": 4.8,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Large",
+    "transmission": "Automatic",
+    "location": ["Miami", "Atlanta", "Orlando"],
+    "booking": []
+  },
+  {
+    "id": 38,
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "year": 2023,
+    "brand": "Volkswagen Tiguan",
+    "pricePerDay": 65,
+    "pricePerWeek": 380,
+    "pricePerMonth": 1500,
+    "category": "SUV",
+    "segment": "Premium",
+
+    "available": true,
+    "tags": ["Kid-friendly"],
+    "images": [
+      "/images/vw_tiguan_1.jpg",
+      "/images/vw_tiguan_2.jpg",
+      "/images/vw_tiguan_3.jpg"
+    ],
+    "description": "A reliable and efficient SUV designed for small families.",
+    "fuelType": "Petrol",
+    "rating": 4.5,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Medium",
+    "transmission": "Automatic",
+    "location": ["Denver", "Salt Lake City", "Seattle"],
+    "booking": []
+  },
+  {
+    "id": 39,
+    "make": "Mazda",
+    "model": "CX-9",
+    "year": 2023,
+    "brand": "Mazda CX-9",
+    "pricePerDay": 90,
+    "pricePerWeek": 500,
+    "pricePerMonth": 1900,
+    "category": "SUV",
+    "segment": "Premium",
+
+    "available": true,
+    "tags": ["Kid-friendly", "Adult-focused"],
+    "images": [
+      "/images/mazda_cx9_1.jpg",
+      "/images/mazda_cx9_2.jpg",
+      "/images/mazda_cx9_3.jpg"
+    ],
+    "description": "A premium family SUV with a spacious interior and sporty styling.",
+    "fuelType": "Petrol",
+    "rating": 4.7,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Extra Large",
+    "transmission": "Automatic",
+    "location": ["New York", "Boston", "Philadelphia"],
+    "booking": []
+  },
+  {
+    "id": 40,
+    "make": "Audi",
+    "model": "A6",
+    "year": 2023,
+    "brand": "Audi A6",
+    "pricePerDay": 200,
+    "pricePerWeek": 1200,
+    "pricePerMonth": 4500,
+    "category": "Luxury Sedan",
+    "segment": "Premium",
+
+    "available": true,
+    "tags": ["Adult-focused"],
+    "images": [
+      "/images/audi_a6_1.jpg",
+      "/images/audi_a6_2.jpg",
+      "/images/audi_a6_3.jpg"
+    ],
+    "description": "A luxury sedan with elegant design and superior driving dynamics.",
+    "fuelType": "Diesel",
+    "rating": 4.8,
+    "seatingCapacity": 5,
+
+    "luggageCapacity": "Medium",
+    "transmission": "Automatic",
+    "location": ["San Francisco", "Los Angeles", "Seattle"],
+    "booking": []
+  }
+]

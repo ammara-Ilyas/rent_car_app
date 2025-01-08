@@ -1,98 +1,144 @@
 "use client";
-import React, { useState } from "react";
-import { MenuItem, Select, InputLabel, FormControl } from "@mui/material";
-
+import React, { useState, useMemo, useEffect } from "react";
+import Image from "next/image";
+import { useCarContext } from "@/contextApi/CarContext";
+import { SortComponent } from "./FilterComponent";
+import { Button, Rating, CircularProgress, Pagination } from "@mui/material";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const InventoryList = () => {
-  const [sortOption, setSortOption] = useState("Recommended");
-  const [searchQuery, setSearchQuery] = useState("");
+  const { inventory, loading, forFilteredInventory } = useCarContext();
+  const [isGrid, setIsGrid] = useState("grid");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
 
-  const cars = [
-    {
-      id: 1,
-      name: "Toyota Camry SE 350",
-      price: 150,
-      category: "Ferrari",
-      image: "/car1.jpg",
-    },
-    {
-      id: 2,
-      name: "Toyota Camry SE 350",
-      price: 80,
-      category: "Ferrari",
-      image: "/car2.jpg",
-    },
-    {
-      id: 3,
-      name: "Toyota Camry SE 350",
-      price: 20,
-      category: "Ferrari",
-      image: "/car3.jpg",
-    },
-    {
-      id: 4,
-      name: "Toyota Camry SE 350",
-      price: 50,
-      category: "Ferrari",
-      image: "/car4.jpg",
-    },
-  ];
+  // Handle Pagination
+  const handlePageChange = (event, value) => {
+    setCurrentPage(value);
+  };
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Animation easing
+      offset: 100, // Offset from the top before animation starts
+      delay: 0, // Delay in milliseconds
+    });
+  }, []);
 
-  const handleSortChange = (event) => setSortOption(event.target.value);
-  const handleSearchChange = (event) =>
-    setSearchQuery(event.target.value.toLowerCase());
-
-  const filteredCars = cars.filter((car) =>
-    car.name.toLowerCase().includes(searchQuery)
-  );
+  // Calculate Paginated Items
+  const currentItems = useMemo(() => {
+    if (!inventory || inventory.length === 0) return [];
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    return inventory.slice(indexOfFirstItem, indexOfLastItem);
+  }, [inventory, currentPage]);
 
   return (
-    <div className="p-4 max-w-screen-lg mx-auto">
-      {/* Search and Sort Section */}
-      <div className="flex items-center justify-between mb-4">
-        <input
-          type="text"
-          placeholder="Search cars..."
-          onChange={handleSearchChange}
-          className="border rounded-lg px-4 py-2 w-full md:w-1/2 focus:outline-none"
-        />
-        <FormControl className="ml-4 min-w-[150px]">
-          <InputLabel>Sort By</InputLabel>
-          <Select
-            value={sortOption}
-            onChange={handleSortChange}
-            className="bg-white"
-          >
-            <MenuItem value="Recommended">Recommended</MenuItem>
-            <MenuItem value="Price: Low to High">Price: Low to High</MenuItem>
-            <MenuItem value="Price: High to Low">Price: High to Low</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
+    <div className="p-4 max-w-screen-lg mx-auto w-full mt-28">
+      <SortComponent setIsGrid={setIsGrid} isGrid={isGrid} />
 
-      {/* Car Listings */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredCars.map((car) => (
-          <div
-            key={car.id}
-            className="border rounded-lg shadow hover:shadow-lg transition overflow-hidden"
-          >
-            <img
-              src={car.image}
-              alt={car.name}
-              className="w-full h-48 object-cover"
+      {/* Loading Indicator */}
+      {loading ? (
+        <div className="flex justify-center items-center h-64">
+          <CircularProgress />
+        </div>
+      ) : (
+        <div
+          className={`${
+            isGrid === "grid" ? "md:grid-cols-2 lg:grid-cols-3" : ""
+          } grid grid-cols-1 gap-6 `}
+        >
+          {inventory ? (
+            currentItems.map((car) => (
+              <div
+                // data-aos="zoom-in-down"
+                className={`${
+                  isGrid === "grid" ? "w-[310px] flex-col " : "w-[90%] flex-row"
+                } flex w-[310px] mx-auto rounded-lg shadow-lg overflow-hidden`}
+                key={car.id}
+              >
+                {/* Image Section */}
+                <div
+                  className={`${
+                    isGrid === "grid" ? "w-full " : "w-[40%] "
+                  } relative`}
+                >
+                  <Image
+                    src={car.image}
+                    alt={car.model}
+                    className="w-full h-48 object-cover"
+                    width={300}
+                    height={48}
+                  />
+                  <span className="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold py-1 px-2 rounded">
+                    New Arrival
+                  </span>
+                </div>
+
+                {/* Content Section */}
+                <div
+                  className={`${
+                    isGrid === "grid" ? "w-full " : "w-[60%]"
+                  } p-4 flex flex-col justify-between`}
+                >
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-lg font-bold">Toyota Camry SE 350</h3>
+                    <Rating
+                      name="read-only"
+                      value={car.rating}
+                      readOnly
+                      size="small"
+                      className="text-yellow-500"
+                    />
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    Category: {car.category}
+                  </p>
+
+                  {/* Details Section */}
+                  <div className="flex items-center gap-2 text-sm text-gray-700 mt-2">
+                    <span>🚗 Auto</span>
+                    <span>👨‍👩‍👧‍👦 5 Persons</span>
+                    <span>📅 {car.year}</span>
+                    <span>⛽ {car.fuelType}</span>
+                  </div>
+
+                  {/* Price & Button Section */}
+                  <div className="mt-4 flex justify-between items-center">
+                    <p className="text-xl font-semibold text-red-500">
+                      ${car.pricePerDay}
+                      <span className="text-gray-700">/ Day</span>
+                    </p>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      size="small"
+                      className="bg-black"
+                    >
+                      Rent Now
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <h1 className="text-4xl font-semibold pt-2">No Data found</h1>
+          )}
+        </div>
+      )}
+
+      {/* Pagination */}
+      <div className=" flex justify-end mr-28">
+        {inventory.length > itemsPerPage && (
+          <div className="flex justify-center mt-6">
+            <Pagination
+              count={Math.ceil(forFilteredInventory.length / itemsPerPage)}
+              page={currentPage}
+              onChange={handlePageChange}
+              color="primary"
             />
-            <div className="p-4">
-              <h2 className="font-bold text-lg">{car.name}</h2>
-              <p className="text-sm text-gray-500">Category: {car.category}</p>
-              <p className="text-red-500 font-bold text-xl">
-                ${car.price} / Day
-              </p>
-              <button className="mt-2 bg-red-500 text-white py-2 px-4 rounded-lg w-full">
-                Rent Now
-              </button>
-            </div>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "categoryName": "Sedans",
+    "image": "/images/categories/sedan.jpg",
+    "description": "Comfortable and fuel-efficient cars, ideal for city driving and long journeys.",
+    "slug": "sedans"
+  },
+  {
+    "id": 2,
+    "categoryName": "SUVs",
+    "image": "/images/categories/suv.jpg",
+    "description": "Spacious and powerful cars, perfect for family trips and off-road adventures.",
+    "slug": "suvs"
+  },
+  {
+    "id": 3,
+    "categoryName": "Luxury Cars",
+    "image": "/images/categories/luxury.jpg",
+    "description": "High-end vehicles offering premium features, designed for comfort and style.",
+    "slug": "luxury-cars"
+  },
+  {
+    "id": 4,
+    "categoryName": "Convertibles",
+    "image": "/images/categories/convertible.jpg",
+    "description": "Stylish and fun cars, perfect for those who love to drive with the top down.",
+    "slug": "convertibles"
+  },
+  {
+    "id": 5,
+    "categoryName": "Electric Cars",
+    "image": "/images/categories/electric.jpg",
+    "description": "Eco-friendly and energy-efficient cars, a great choice for the environmentally conscious.",
+    "slug": "electric-cars"
+  },
+  {
+    "id": 6,
+    "categoryName": "Vans",
+    "image": "/images/categories/van.jpg",
+    "description": "Ideal for large groups or families, offering ample seating and storage space.",
+    "slug": "vans"
+  },
+  {
+    "id": 7,
+    "categoryName": "Coupes",
+    "image": "/images/categories/coupe.jpg",
+    "description": "Sporty two-door cars offering excellent performance and a sleek design.",
+    "slug": "coupe"
+  },
+  {
+    "id": 8,
+    "categoryName": "Hatchbacks",
+    "image": "/images/categories/hatchback.jpg",
+    "description": "Compact and versatile cars, offering both city-friendly size and practical rear space.",
+    "slug": "hatchbacks"
+  }
+]

@@ -1,129 +1,114 @@
-import Image from "next/image";
-import {
-  Star,
-  DirectionsCar,
-  Person,
-  LocalGasStation,
-} from "@mui/icons-material";
-
+"use client";
+import React, { useState, useEffect, useMemo } from "react";
+import Button from "@mui/material/Button";
+import CarCard from "@/components/miniWidgets/CarCard";
+import { useCarContext } from "@/contextApi/CarContext";
+import { Pagination } from "@mui/material";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const CarListings = () => {
-  const cars = [
-    {
-      id: 1,
-      image: "/images/cars/car1.png",
-      name: "Toyota Camry SE 350",
-      price: 50,
-    },
-    {
-      id: 2,
-      image: "/images/cars/car2.png",
-      name: "Toyota Camry SE 350",
-      price: 50,
-    },
-    {
-      id: 3,
-      image: "/images/cars/car3.png",
-      name: "Toyota Camry SE 350",
-      price: 50,
-    },
-    {
-      id: 4,
-      image: "/images/cars/car4.png",
-      name: "Toyota Camry SE 350",
-      price: 50,
-    },
-    {
-      id: 5,
-      image: "/images/cars/car5.png",
-      name: "Toyota Camry SE 350",
-      price: 50,
-    },
-    {
-      id: 6,
-      image: "/images/cars/car6.png",
-      name: "Toyota Camry SE 350",
-      price: 50,
-    },
+  const {
+    inventory,
+    forFilteredInventory,
+    setInventory,
+    setforFilteredInventory,
+  } = useCarContext();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      offset: 100, // Offset from the top before animation starts
+      delay: 0,
+    });
+  }, []);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+
+  // Handle Pagination
+  const handlePageChange = (event, value) => {
+    setCurrentPage(value);
+  };
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const categories = [
+    "All",
+    "Luxury Cars",
+    "Electric Cars",
+    "Compact Cars",
+    "Off-Road",
+    "SUVs",
   ];
 
+  const handleFilter = (category) => {
+    if (category === "All") {
+      setforFilteredInventory(inventory);
+    } else {
+      const filteredCars = inventory.filter(
+        (car) => car.categoryName == category
+      );
+      setforFilteredInventory(filteredCars);
+    }
+    setActiveCategory(category);
+
+    setCurrentPage(1);
+  };
+
+  // Calculate Paginated Items
+  const currentItems = useMemo(() => {
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    return forFilteredInventory.slice(indexOfFirstItem, indexOfLastItem);
+  }, [forFilteredInventory, currentPage]);
   return (
-    <div className="container mx-auto px-4 py-16">
-      {/* Header */}
-      <div className="text-center mb-8">
-        <p className="text-gray-500">Lorem Ipsum is Simply Dummy Text</p>
-        <h1 className="text-4xl font-bold">
-          LOREM IPSUM IS <span className="text-red-600">SIMPLY DUMMY TEXT</span>
-        </h1>
+    <div className="p-4 my-8">
+      <div className="text-center mb-6">
+        <p>Lorem Ipsum is simply dummy text</p>
+        <h2 className="text-3xl font-bold mb-4">
+          Lorem Ipsum is{" "}
+          <span className=" text-red-500 ">Simply Dummy Text</span>
+        </h2>
+        <div className="flex justify-center space-x-4">
+          {categories.map((category) => (
+            <Button
+              data-aos="flip-left"
+              key={category}
+              variant="contained"
+              onClick={() => handleFilter(category)}
+              style={{
+                backgroundColor: activeCategory === category ? "red" : "black",
+                color: "white",
+              }}
+            >
+              {category}
+            </Button>
+          ))}
+        </div>
       </div>
 
-      {/* Filters */}
-      <div className="flex justify-center space-x-4 mb-8">
-        <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700">
-          Show All
-        </button>
-        <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800">
-          Brakes
-        </button>
-        <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800">
-          Suspension
-        </button>
-        <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800">
-          Wheels
-        </button>
-        <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800">
-          Steering
-        </button>
-      </div>
+      <div className="flex flex-col w-[80%] mx-auto flex-wrap justify-center gap-2">
+        {/* Car Listings */}
+        <div className="flex w-[80%] mx-auto flex-wrap justify-center gap-6">
+          {currentItems.map((car, index) => (
+            <div className="w-[30%]" key={index}>
+              <CarCard car={car} />
+            </div>
+          ))}
+        </div>
 
-      {/* Cars Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {cars.map((car) => (
-          <div
-            key={car.id}
-            className="border rounded-lg shadow-md overflow-hidden"
-          >
-            {/* Image */}
-            <div className="relative">
-              <Image
-                src={car.image}
-                alt={car.name}
-                width={500}
-                height={300}
-                className="w-full h-48 object-cover"
+        {/* Pagination */}
+        <div className=" flex justify-end mr-28">
+          {forFilteredInventory.length > itemsPerPage && (
+            <div className="flex justify-center mt-6">
+              <Pagination
+                count={Math.ceil(forFilteredInventory.length / itemsPerPage)}
+                page={currentPage}
+                onChange={handlePageChange}
+                color="primary"
               />
-              <span className="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">
-                New
-              </span>
             </div>
-
-            {/* Content */}
-            <div className="p-4">
-              {/* Title */}
-              <h3 className="text-xl font-bold mb-2">{car.name}</h3>
-              {/* Features */}
-              <div className="flex items-center text-gray-500 text-sm space-x-4 mb-4">
-                <span className="flex items-center">
-                  <DirectionsCar fontSize="small" className="mr-1" /> Auto
-                </span>
-                <span className="flex items-center">
-                  <Person fontSize="small" className="mr-1" /> 5 Persons
-                </span>
-                <span className="flex items-center">
-                  <LocalGasStation fontSize="small" className="mr-1" /> Petrol
-                </span>
-              </div>
-              {/* Price */}
-              <div className="flex justify-between items-center">
-                <p className="text-lg font-bold text-red-600">
-                  ${car.price} / Day
-                </p>
-                <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
-                  Rent Now
-                </button>
-              </div>
-            </div>
-          </div>
-        ))}
+          )}
+        </div>
       </div>
     </div>
   );

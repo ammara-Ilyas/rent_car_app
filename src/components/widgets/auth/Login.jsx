@@ -1,38 +1,16 @@
 // pages/LoginPage.jsx
 import { TextField, Button, Checkbox, FormControlLabel } from "@mui/material";
-
+import { FaFacebook } from "react-icons/fa";
+import Link from "next/link";
 export default function LoginPage() {
   return (
-    <div className="bg-gray-100 min-h-screen">
-      {/* Header Section */}
-      <div className="bg-black">
-        <div className="container mx-auto flex justify-between items-center py-4 px-6">
-          <h1 className="text-white text-2xl font-bold">Rumble</h1>
-          <nav className="flex gap-4">
-            <Button color="inherit" className="text-white">
-              Home
-            </Button>
-            <Button color="inherit" className="text-white">
-              Inventory
-            </Button>
-            <Button color="inherit" className="text-white">
-              Blog
-            </Button>
-            <Button color="inherit" className="text-white">
-              About
-            </Button>
-            <Button variant="contained" color="error">
-              Booking Now
-            </Button>
-          </nav>
-        </div>
-      </div>
-
+    <>
+      {" "}
       {/* Login Form Section */}
-      <div className="container mx-auto py-12">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+      <div className="container mx-auto  py-12 w-[80%] my-10 pl-20">
+        <div className="flex flex-col border rounded-lg w-[90%] lg:flex-row shadow-lg items-center ">
           {/* Login Form */}
-          <div className="w-full lg:w-1/2 p-6 bg-white rounded shadow-lg">
+          <div className="w-full lg:w-[50%] p-6 bg-white rounded-l-md h-full">
             <h2 className="text-2xl font-semibold mb-4">Login</h2>
             <p className="text-gray-600 mb-6">Login to access your account</p>
 
@@ -59,29 +37,28 @@ export default function LoginPage() {
                   control={<Checkbox color="primary" />}
                   label="Remember Me"
                 />
-                <a href="#" className="text-blue-600 text-sm">
+                <Link href="/register" className="text-red-600 text-sm">
                   Forgot Password?
-                </a>
+                </Link>
               </div>
 
               {/* Submit Button */}
               <Button
                 type="submit"
                 variant="contained"
-                color="primary"
                 fullWidth
-                className="mb-4"
+                className="mb-4 bg-red-600 text-white py-[10px]"
               >
                 Login
               </Button>
 
               {/* Sign Up Link */}
               <div className="text-center">
-                <p className="text-gray-600">
+                <p className="text-black">
                   Don't have an account?{" "}
-                  <a href="#" className="text-blue-600">
+                  <Link href="/register" className="text-red-600">
                     Sign up
-                  </a>
+                  </Link>
                 </p>
               </div>
             </form>
@@ -89,27 +66,29 @@ export default function LoginPage() {
             {/* Social Login */}
             <div className="mt-6 text-center">
               <p className="text-gray-600 mb-4">Or login with</p>
-              <div className="flex justify-center gap-4">
-                <Button variant="outlined" className="flex-1">
-                  <i className="fab fa-facebook mr-2"></i> Facebook
+              <div className="flex justify-center gap-4 ">
+                <Button variant="outlined" className="flex-1 ">
+                  <FaFacebook className="" />
                 </Button>
                 <Button variant="outlined" className="flex-1">
-                  <i className="fab fa-google mr-2"></i> Google
+                  <FaFacebook />
                 </Button>
               </div>
             </div>
           </div>
 
           {/* Image Section */}
-          <div className="w-full lg:w-1/2">
-            <img
-              src="/path-to-your-image.jpg"
-              alt="Car"
-              className="rounded shadow-lg"
-            />
-          </div>
+          <div
+            className="w-full lg:w-1/2  h-[584px] rounded-r-lg p-2 "
+            style={{
+              backgroundImage: `url("/images/bg_01.webp")`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
