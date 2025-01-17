@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { CarProvider } from "@/contextApi/CarContext";
-import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
@@ -26,6 +25,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CarProvider>
+          {/* <Navbar /> */}
           {children}
           <Footer />
         </CarProvider>

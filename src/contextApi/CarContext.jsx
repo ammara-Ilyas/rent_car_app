@@ -77,7 +77,7 @@ export function CarProvider({ children }) {
       try {
         const response = await fetch("/data/inventory.json");
         let data = await response.json();
-        console.log("data", data);
+        console.log("data in context", data);
         setInventory(data);
         setforFilteredInventory(data);
       } catch (error) {

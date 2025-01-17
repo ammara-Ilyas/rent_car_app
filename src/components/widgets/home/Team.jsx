@@ -1,5 +1,6 @@
 import { Facebook, Twitter, YouTube, Instagram } from "@mui/icons-material";
 import { useEffect } from "react";
+import Link from "next/link";
 import { FaFacebookF } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -71,48 +72,27 @@ export default function Team() {
             />
 
             {/* Social Media Icons */}
-            <div className="flex justify-center gap-4 -bottom-10 absolute left-0 group-hover:bottom-1 duration-500 transition-transform ease-in-out  w-full rounded-md ">
+            <div className="flex justify-center gap-4 -bottom-16 absolute left-0 group-hover:bottom-1 duration-500 transition-transform  ease-in-out  w-full rounded-md ">
               {icon.map((item, i) => (
-                <a
+                <Link
                   key={i}
                   href={item.link}
-                  className="text-red-500 hover:text-red-700 bg-red-700 rounded-md py-1 px-[10px] flex items-center justify-center transition-transform duration-500"
-                  aria-label="Facebook"
+                  className="text-red-500 hover:text-red-700 bg-red-700 rounded-md py-1 px-[8px] flex items-center justify-center transition-transform duration-500"
                 >
-                  {item.icon}
-                  <FaFacebookF
-                    className=" text-black text-[18px] bg-white p-1 rounded-md"
-                    style={{ transition: "transform 0.5s 1 ease-in-out" }}
+                  <span
+                    className=" text-black text-[18px] duration-500 bg-white p-1 rounded-md"
+                    style={{ transition: "transform 0.5s ease-in-out" }}
                     onMouseEnter={(e) =>
                       (e.currentTarget.style.transform = "rotateY(360deg)")
                     }
                     onMouseLeave={(e) =>
                       (e.currentTarget.style.transform = "rotateY(0deg)")
                     }
-                  />
-                </a>
+                  >
+                    {item.icon}
+                  </span>
+                </Link>
               ))}
-              <a
-                href="#"
-                className="text-red-500 hover:text-red-700 bg-red-700 rounded-md py-1 px-[10px] flex items-center justify-center transition-transform duration-500"
-                aria-label="Facebook"
-              >
-                <Twitter className=" text-white text-sm" />
-              </a>{" "}
-              <a
-                href="#"
-                className="text-red-500 hover:text-red-700 bg-red-700 rounded-md py-1 px-[10px] flex items-center justify-center transition-transform duration-500"
-                aria-label="Facebook"
-              >
-                <YouTube className=" text-white text-sm" />
-              </a>{" "}
-              <a
-                href="#"
-                className="text-red-500 hover:text-red-700 bg-red-700 rounded-md py-2 px-[10px] flex items-center justify-center transition-transform duration-500"
-                aria-label="Facebook"
-              >
-                <Instagram className=" text-white text-sm" />
-              </a>
             </div>
           </div>
         ))}

@@ -1,12 +1,33 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { Button, Rating } from "@mui/material";
 import { ProductImage, Specifications } from "./ProductImages";
 import BookingForm from "./BookingForm";
 import BookingSummary from "./BookingSummary";
 import Image from "next/image";
+import { useCarContext } from "@/contextApi/CarContext";
 const ProductDetail = ({ id }) => {
-  return (
-    <div className="container mx-auto p-4">
+  const { inventory, forFilteredInventory } = useCarContext();
+  const [product, setProduct] = useState({});
+  const [duration, setDuration] = useState("");
+
+  useEffect(() => {
+    const getCar = async () => {
+      console.log("idd in detail", id, forFilteredInventory);
+
+      let car =
+        forFilteredInventory?.length > 0
+          ? forFilteredInventory.filter((item) => item.id == id)[0]
+          : null;
+      console.log("car in detail", car);
+      setProduct(car);
+    };
+    getCar();
+  }, []);
+  console.log("duration", duration);
+
+  return product ? (
+    <div className="container mx-auto p-4 border-2 border-red-600">
       {/* Top Header */}
       <div className="text-sm text-black flex flex-row gap-2 mb-4">
         <span className="cursor-pointer ">Car Rental</span> /{" "}
@@ -18,11 +39,11 @@ const ProductDetail = ({ id }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Left Section */}
         <div className="col-span-2">
-          <ProductImage />
+          <ProductImage images={product.images} />
 
           {/* Features */}
           <div className="mt-6 ">
-            <Specifications />
+            <Specifications product={product} />
           </div>
 
           {/* Description */}
@@ -66,29 +87,33 @@ const ProductDetail = ({ id }) => {
 
         {/* Right Section */}
         <div className="bg-white rounded-lg shadow-lg p-4 border-2">
-          <BookingSummary />
+          <BookingSummary product={product} setDuration={setDuration} />
           <div className="text-sm text-center font-semibold ">
-            Duration: <span className="">3 Days and 9 hours</span>
+            Duration: <span className="">{duration || "None"} </span>
           </div>
           <div className="mt-4 text-sm font-medium mb-4 px-5">
             <div className="flex flex-row  border-b-[1px] pb-2 justify-between items-center">
               <span>Package Type </span>
-              <span className="font-semibold">300 kms/day</span>
+              <span className="font-semibold">{product.kmPerDay} kms/day</span>
             </div>
             <div className="flex flex-row border-b-[1px] pb-2  justify-between items-center">
               <span>Free kms for rental</span>{" "}
-              <span className="font-semibold">1013 kms</span>
+              <span className="font-semibold">{product.rentalPerDay} kms</span>
             </div>
             <div className="flex flex-row border-b-[1px] pb-2  justify-between items-center">
               <span>Extra km charges at</span>{" "}
-              <span className="font-semibold">₹9/km</span>
+              <span className="font-semibold">
+                {product.extraKmChargePerDay}$/km
+              </span>
             </div>
           </div>
           {/* Price and Info */}
-          <BookingForm />
+          <BookingForm product={product} />
         </div>
       </div>
     </div>
+  ) : (
+    <div className="mt-10 text-4xl text-center">Loading...</div>
   );
 };
 

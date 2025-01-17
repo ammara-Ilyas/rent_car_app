@@ -1,7 +1,7 @@
 import React from "react";
 import { TextField, Checkbox, Button } from "@mui/material";
 
-const BookingForm = () => {
+const BookingForm = ({ product }) => {
   return (
     <div className="bg-white shadow-md rounded-lg">
       <h2 className="text-lg font-bold bg-black text-white py-2 px-4 rounded-t-lg">
@@ -10,11 +10,11 @@ const BookingForm = () => {
       <div className="space-y-2 m-4 pb-3 border-b">
         <div className="flex justify-between">
           <span>Rental Charges</span>
-          <span>₹8,825</span>
+          <span>{product.kmPerDay}</span>
         </div>
         <div className="flex justify-between">
           <span>GST</span>
-          <span>₹2,471</span>
+          <span>$100</span>
         </div>
         <div className="flex justify-between">
           <span>Refundable Deposit</span>
@@ -30,20 +30,10 @@ const BookingForm = () => {
         </div>
         <div>
           <Checkbox color="primary" />
-          <span className="text-sm ">
-            Trip Protection Plan{" "}
-            <span className="text-blue-500 cursor-pointer">View Details</span>
-          </span>
+          <span className="text-sm ">With Deriver </span>
         </div>
       </div>
-      <div className="mt-4">
-        <TextField
-          label="Promo Code"
-          variant="outlined"
-          size="small"
-          fullWidth
-        />
-      </div>
+
       <div className="mt-6 flex justify-between text-lg font-semibold">
         <span>Total Amount</span>
         <span>₹14,296</span>

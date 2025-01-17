@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Section */}
         <div
-          data-aos="flip-left"
+          data-aos="flip-right"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
           className="bg-red-600 text-white flex flex-col  p-8 rounded-lg relative"
@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Personalized Service */}
           <div
-            data-aos="flip-left"
+            data-aos="flip-right"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
             className="bg-red-500 text-white p-6 rounded-lg shadow-md flex flex-col items-start justify-start "
@@ -71,7 +71,7 @@ const WhyChooseUs = () => {
 
           {/* 24/7 Support */}
           <div
-            data-aos="flip-left"
+            data-aos="flip-right"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
             className="bg-black text-white p-6 rounded-lg shadow-md flex flex-col  items-start justify-start "
@@ -86,7 +86,7 @@ const WhyChooseUs = () => {
 
           {/* Best Price */}
           <div
-            data-aos="flip-left"
+            data-aos="flip-right"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
             className="bg-black text-white p-6 rounded-lg shadow-md flex flex-col  items-start justify-start "
@@ -101,7 +101,7 @@ const WhyChooseUs = () => {
 
           {/* Trusted Company */}
           <div
-            data-aos="flip-left"
+            data-aos="flip-right"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
             className="bg-red-500 text-white p-6 rounded-lg shadow-md flex flex-col  items-start justify-start "

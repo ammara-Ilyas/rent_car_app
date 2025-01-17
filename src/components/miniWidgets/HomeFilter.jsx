@@ -154,8 +154,8 @@ const HomeFilter = () => {
   }, []);
   return (
     <div
-      data-aos="flip-left"
-      className="absolute right-24 top-20 bg-red-700 bg-opacity-90 rounded-md p-6 shadow-lg w-96"
+      // data-aos="flip-left"
+      className="absolute  top-[60%] lg:right-24 lg:top-20 bg-red-700 bg-opacity-90 rounded-md p-6 shadow-lg w-96"
     >
       <h2 className="text-xl font-bold text-white mb-4">
         Search for Rental Cars
@@ -261,15 +261,14 @@ const HomeFilter = () => {
         </div>
 
         {/* Adults and Kids */}
-        <div className="flex space-x-4">
-          <FormControl fullWidth size="small">
-            <InputLabel>Adults</InputLabel>
+        <div className="flex space-x-4  items-center justify-center mb-2">
+          <FormControl fullWidth size="small" className="mt-4 text-white">
+            <InputLabel className="text-white">Adults</InputLabel>
             <Select
               name="adults"
               value={searchFilter.adults}
               onChange={handleSearchFilters}
-              className="border-2 border-red-700 mt-3 bg-white rounded-md"
-              label="Adults"
+              className=" border-red-700 mt-2 bg-white rounded-md"
             >
               {[1, 2, 3, 4, 5].map((num) => (
                 <MenuItem value={num} key={num} className="bg-red-700">
@@ -279,14 +278,13 @@ const HomeFilter = () => {
             </Select>
           </FormControl>
 
-          <FormControl fullWidth size="small">
-            <InputLabel>Kids</InputLabel>
+          <FormControl fullWidth size="small" className="mt-4 text-white">
+            <InputLabel className="text-white">Kids</InputLabel>
             <Select
               name="kids"
               value={searchFilter.kids}
               onChange={handleSearchFilters}
-              className="border-2 border-red-700 mt-3 bg-white rounded-md"
-              label="Kids"
+              className=" border-red-700 focus:border-none focus:text-white bg-white rounded-md mt-1"
             >
               {[0, 1, 2, 3, 4].map((num) => (
                 <MenuItem value={num} key={num}>

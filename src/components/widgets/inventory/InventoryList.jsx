@@ -24,6 +24,7 @@ const InventoryList = () => {
       delay: 0, // Delay in milliseconds
     });
   }, []);
+  console.log("data in list", inventory, "filter", forFilteredInventory);
 
   // Calculate Paginated Items
   const currentItems = useMemo(() => {
