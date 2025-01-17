@@ -88,7 +88,7 @@ const Navbar = () => {
                 {item.nav}
               </Link>
             ))}
-            <Butnton text="Booking" />
+            <Button text="Booking" />
           </>
         </div>
       </div>
