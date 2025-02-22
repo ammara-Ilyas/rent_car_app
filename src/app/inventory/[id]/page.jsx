@@ -7,14 +7,15 @@ import Hero from "@/components/miniWidgets/Hero";
 
 export default function Page() {
   const param = useParams();
-  console.log("id", param?.id); // Optional chaining to avoid errors if param is undefined
+  console.log("id", param?.id);
 
-  if (!param?.id) {
-    return <p>Loading...</p>; // Fallback UI while `param.id` is not available
-  }
+  // if (!param?.id) {
+  //   return <p>Loading...</p>; // Fallback UI while `param.id` is not available
+  // }
 
   return (
     <>
+      {param.id}
       <Hero />
       <ProductDetail id={param.id} />
       <BlogSlider />

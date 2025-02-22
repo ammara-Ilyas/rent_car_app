@@ -24,7 +24,7 @@ const InventoryList = () => {
       delay: 0, // Delay in milliseconds
     });
   }, []);
-  console.log("data in list", inventory, "filter", forFilteredInventory);
+  // console.log("data in list", inventory, "filter", forFilteredInventory);
 
   // Calculate Paginated Items
   const currentItems = useMemo(() => {
@@ -65,7 +65,7 @@ const InventoryList = () => {
                   } relative`}
                 >
                   <Image
-                    src={car.image}
+                    src={car.images[0]}
                     alt={car.model}
                     className="w-full h-48 object-cover"
                     width={300}

@@ -9,10 +9,8 @@ const BlogSlider = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
       easing: "ease-in-out", // Animation easing
       offset: 100, // Offset from the top before animation starts
-      delay: 0, // Delay in milliseconds
     });
   }, []);
   useEffect(() => {
@@ -39,8 +37,7 @@ const BlogSlider = () => {
         {blogs.map((item, i) => (
           <div
             data-aos="zoom-in-down"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
+            data-aos-delay={i * 200}
             key={i}
             className="max-w-xs rounded overflow-hidden shadow-lg bg-white hover:scale-110 transition-transform duration-500 ease-in-out"
           >

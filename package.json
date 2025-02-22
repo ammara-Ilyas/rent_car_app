@@ -17,6 +17,7 @@
     "aos": "^2.3.4",
     "lightgallery": "^2.8.2",
     "next": "15.1.2",
+    "next-nprogress-bar": "^2.4.7",
     "react": "^19.0.0",
     "react-awesome-slider": "^4.1.0",
     "react-dom": "^19.0.0",

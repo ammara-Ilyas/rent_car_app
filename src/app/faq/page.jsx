@@ -1,15 +1,16 @@
 import React from "react";
+
 import Hero from "@/components/miniWidgets/Hero";
-import History from "@/components/miniWidgets/History";
+import FAQAccordion from "@/components/miniWidgets/faqs";
 import BlogSlider from "@/components/widgets/home/BlogSlider";
-const Page = () => {
+const page = () => {
   return (
     <>
       <Hero />
-      <History />
+      <FAQAccordion />
       <BlogSlider />
     </>
   );
 };
 
-export default Page;
+export default page;

@@ -1,29 +1,31 @@
 import React, { useEffect } from "react";
 import { Button, Chip } from "@mui/material";
+import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const CarCard = ({ car }) => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      easing: "ease-in-out", // Animation easing
+      easing: "ease-out", // Animation easing
       offset: 100, // Offset from the top before animation starts
-      delay: 0, // Delay in milliseconds
     });
   }, []);
 
   return (
     <div
       data-aos="fade-up"
+      data-aos-delay={200}
       className="shadow-lg rounded-lg overflow-hidden w-[100%] "
       // style={{ margin: "10px", flex: "1 0 auto" }}
     >
       {/* Image Section */}
       <div className="relative">
-        <img
+        <Image
           src={car.image}
           alt={car.brand}
           className="w-full h-48 object-cover "
+          width={200}
+          height={200}
         />
         <Chip
           label="New Arrival"

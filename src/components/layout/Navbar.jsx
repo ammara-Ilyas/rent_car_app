@@ -23,6 +23,8 @@ const Navbar = () => {
       nav: "about",
       link: "/about",
     },
+
+    { nav: "faqs", link: "/faq" },
     {
       nav: "login",
       link: "/login",
@@ -47,7 +49,7 @@ const Navbar = () => {
               {page.nav}
             </Link>
           ))}
-          <Button text="Booing" />
+          <Button text="Booking" />
         </>
       </div>
       {/* Mobile Navigation Icon */}

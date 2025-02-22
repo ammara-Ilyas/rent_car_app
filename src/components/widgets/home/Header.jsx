@@ -23,13 +23,15 @@ const Navbar = () => {
       nav: "about",
       link: "/about",
     },
+    { nav: "faqs", link: "/faq" },
+
     {
       nav: "login",
       link: "/login",
     },
   ];
   return (
-    <nav className="flex items-center px-16 justify-between p-4 shadow-md bg-white ">
+    <nav className="flex items-center sticky top-0 right-0 z-50 px-16 justify-between p-4 shadow-md bg-white ">
       {/* Logo */}
       <div className="text-2xl font-bold text-black">
         <span className="text-red-500">R</span>umble
@@ -37,12 +39,12 @@ const Navbar = () => {
 
       <div className=" justify-between items-center gap-6 hidden md:flex">
         {/* Links */}
-        <div className=" space-x-4 items-center  flex">
+        <div className=" transition-all ease-in-out duration-500   space-x-4 items-center  flex">
           {links.map((page, i) => (
             <Link
               key={i}
               href={page.link}
-              className="px-4 py-2  hover:bg-red-600 hover:text-white  rounded-md font-semibold capitalize"
+              className="px-4 py-2  hover:bg-red-600 hover:text-white transition-all ease-in-out duration-500   rounded-md font-semibold capitalize"
             >
               {page.nav}
             </Link>
