@@ -38,7 +38,7 @@ const AnimatedButton = ({ text }) => {
           zIndex: 2,
         }}
       >
-        <div className=" py-3 px-3 rounded-md bg-red-500 text-white">
+        <div className=" py-3 px-3  rounded-md animate-border-move bg-red-500 text-white">
           {text}
         </div>
       </span>

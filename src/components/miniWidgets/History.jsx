@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 const History = () => {
   return (
-    <div className="w-[80%] mx-auto my-10 mt-20   border-green-900 flex md:flex-row flex-col items-center justify-center gap-5">
-      <div className=" w-[40%]">
+    <div className="w-[95%] xl:w-[80%] mx-auto my-10 mt-20  flex md:flex-row flex-col items-center justify-center gap-5">
+      <div className=" w-[95%] sm:w-[80%]  md:w-[40%]">
         <Image
           src="/images/bg_01.webp"
           alt="history"
@@ -13,7 +13,7 @@ const History = () => {
         />
       </div>
 
-      <div className="ml-10 w-[40%] text-gray-800 font-sans letter-wide  ">
+      <div className="md:ml-10 w-[90%] sm:w-[80%]  md:w-[40%] text-gray-800 font-sans letter-wide  ">
         <h2 className="text-red-600 font-bold text-4xl pb-4">About Us</h2>
         <p>
           In 2005, proprietor Emily Carter&apos;s daughter, Sarah, sold the

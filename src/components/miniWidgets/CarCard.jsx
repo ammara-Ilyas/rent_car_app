@@ -1,29 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Chip } from "@mui/material";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const CarCard = ({ car }) => {
-  // useEffect(() => {
-  //   AOS.init({
-  //     easing: "ease-out", // Animation easing
-  //     offset: 100, // Offset from the top before animation starts
-  //   });
-  // }, []);
-  console.log("car images", car.images[0]);
+  const [carImage, setCarImage] = useState("/images/categories/car_01.avif");
+  useEffect(() => {
+    setCarImage(
+      Array.isArray(car.images) && car.images.length > 0
+        ? car.images[0]
+        : car.image || "/images/categories/car_01.avif"
+    );
+  }, []);
+  // console.log("car images", car.images[0]);
 
   return (
-    <div
-      // data-aos="fade-up"
-      // data-aos-delay={200}
-      className="shadow-lg rounded-lg overflow-hidden w-[100%] "
-      // style={{ margin: "10px", flex: "1 0 auto" }}
-    >
+    <div className="shadow-lg rounded-lg overflow-hidden w-[100%] ">
       {/* Image Section */}
       <div className="relative">
         <Image
-          src={car.images[1]}
-          alt={car.brand}
+          src={carImage}
+          alt={car.brand || "Car"}
           className="w-full h-48 object-cover "
           width={200}
           height={200}

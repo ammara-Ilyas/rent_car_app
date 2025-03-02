@@ -154,10 +154,7 @@ const HomeFilter = () => {
     });
   }, []);
   return (
-    <div
-      // data-aos="flip-left"
-      className=" bg-red-700 bg-opacity-90 rounded-md p-6 shadow-lg w-80  sm:w-96"
-    >
+    <div className=" bg-red-700 bg-opacity-90 rounded-md p-6 shadow-lg w-80  sm:w-96">
       <h2 className="text-xl font-bold text-white mb-4">
         Search for Rental Cars
       </h2>
@@ -264,7 +261,9 @@ const HomeFilter = () => {
         {/* Adults and Kids */}
         <div className="flex space-x-4  items-center justify-center mb-2">
           <FormControl fullWidth size="small" className="mt-4 text-white">
-            <InputLabel className="text-white">Adults</InputLabel>
+            <InputLabel className="text-white  focus:text-white">
+              Adults
+            </InputLabel>
             <Select
               name="adults"
               value={searchFilter.adults}
@@ -280,7 +279,9 @@ const HomeFilter = () => {
           </FormControl>
 
           <FormControl fullWidth size="small" className="mt-4 text-white">
-            <InputLabel className="text-white">Kids</InputLabel>
+            <InputLabel className="text-white focus:text-white ">
+              Kids
+            </InputLabel>
             <Select
               name="kids"
               value={searchFilter.kids}
@@ -288,7 +289,7 @@ const HomeFilter = () => {
               className=" border-red-700 focus:border-none focus:text-white bg-white rounded-md mt-1"
             >
               {[0, 1, 2, 3, 4].map((num) => (
-                <MenuItem value={num} key={num}>
+                <MenuItem value={num} key={num} className="bg-red-700">
                   {num}
                 </MenuItem>
               ))}

@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { CarProvider } from "@/contextApi/CarContext";
 import Footer from "@/components/layout/Footer";
+import Loader from "@/components/miniWidgets/Loader";
 import ProgressBarProviders from "@/components/miniWidgets/Progressbar";
 import "./globals.css";
 
@@ -43,6 +44,7 @@ export default async function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Loader />
         <CarProvider inventoryData={inventoryData}>
           <ProgressBarProviders>
             {/* <Navbar /> */}

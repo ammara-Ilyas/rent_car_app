@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const CarService = () => {
   const [carServices, setCarServives] = useState([]);
-  const NEXT_PUBLIC_API_URL = "http://localhost:5000";
+  const NEXT_PUBLIC_API_URL = "http://localhost:3000";
 
   useEffect(() => {
     AOS.init({
@@ -31,11 +31,11 @@ const CarService = () => {
   }, []);
   return (
     <div
-      className="pt-16 pb-36  bg-black bg-opacity-40 px-28 "
+      className="pt-16 pb-36  bg-black bg-opacity-40 px-14 sm:px-28 "
       style={{
         paddingBottom: "30px",
         position: "relative",
-        backgroundImage: `url("/images/bg_02.webp")`,
+        backgroundImage: `url("/images/bg_02.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -87,7 +87,9 @@ const CarService = () => {
         {carServices.map((service) => (
           <div
             key={service.id}
-            className="bg-white  w-[90%] group hover:border-red-600 gap-5 border-none rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            className="bg-white 
+            w-[100%] md:w-[95%]  bg-opacity-80 
+            group hover:border-red-600 gap-5 border-none rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
             data-aos="zoom-in"
             data-aos-delay={200}
           >

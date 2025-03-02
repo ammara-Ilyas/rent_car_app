@@ -8,14 +8,14 @@ export default function FAQAccordion() {
   const [openIndexes, setOpenIndexes] = useState([]);
   const [faqs, setFaqs] = useState([]);
   const [loading, setLoading] = useState(true);
-  const NEXT_PUBLIC_API_URL = "http://localhost:5000";
+  const NEXT_PUBLIC_API_URL = "http://localhost:3000";
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await fetch(`${NEXT_PUBLIC_API_URL}/data/faqs.json`);
         const data = await res.json();
-        // console.log("Faqs", data.faqs);
+        console.log("Faqs", data.faqs);
         setFaqs(data.faqs);
       } catch (error) {
         console.error(error);
@@ -24,7 +24,7 @@ export default function FAQAccordion() {
       }
     };
     fetchData();
-  }, []);
+  }, [faqs]);
 
   const toggleAccordion = (index) => {
     setOpenIndexes((prevIndexes) =>

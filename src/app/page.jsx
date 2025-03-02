@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
 import Navbar from "@/components/widgets/home/Header";
-import PopularCars from "@/components/widgets/home/PopularCars";
 import WhyChooseUs from "@/components/widgets/home/WhyChooseUs";
 import Team from "@/components/widgets/home/Team";
 import CarCategories from "@/components/widgets/home/CarCategories";
@@ -25,13 +24,12 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <CarShowcase />
-      {/* <CarCategories /> */}
+      <CarCategories />
       <CarListings />
-      {/* <CarService />
-      <PopularCars />
+      <CarService />
       <WhyChooseUs />
       <Team />
-      <BlogSlier /> */}
+      <BlogSlier />
     </div>
   );
 }

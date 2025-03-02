@@ -7,8 +7,8 @@ export default function LoginPage() {
     <>
       {" "}
       {/* Login Form Section */}
-      <div className="container mx-auto  py-12 w-[80%] my-10 pl-20">
-        <div className="flex flex-col border rounded-lg w-[90%] lg:flex-row shadow-lg items-center ">
+      <div className="container mx-auto  py-12 w-[95%] md:w-[80%] lg:w-[95%] xl:w-[80%] my-10 sm:pl-20">
+        <div className="flex flex-col border rounded-lg w-[98%] sm:w-[90%] lg:flex-row shadow-lg items-center ">
           {/* Login Form */}
           <div className="w-full lg:w-[50%] p-6 bg-white rounded-l-md h-full">
             <h2 className="text-2xl font-semibold mb-4">Login</h2>

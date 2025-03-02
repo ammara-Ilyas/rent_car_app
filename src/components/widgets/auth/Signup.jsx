@@ -3,8 +3,8 @@ import { TextField, Button, Checkbox, FormControlLabel } from "@mui/material";
 import Link from "next/link";
 const SignupPage = () => {
   return (
-    <div className="container mx-auto  py-12 w-[80%] my-10 pl-20">
-      <div className="flex flex-col border rounded-lg w-[90%] lg:flex-row shadow-lg items-center ">
+    <div className="container mx-auto  py-12 w-[95%] md:w-[80%] lg:w-[95%] xl:w-[80%] my-10 sm:pl-20">
+      <div className="flex flex-col border rounded-lg w-[98%] sm:w-[90%] lg:flex-row shadow-lg items-center ">
         {/* Signup Form Section */}
         <div className="w-full lg:w-[50%] p-6 bg-white rounded-l-md h-full">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Sign Up</h2>

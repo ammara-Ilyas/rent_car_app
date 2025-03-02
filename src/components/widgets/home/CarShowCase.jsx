@@ -75,7 +75,7 @@ const CarShowcase = () => {
         <div className="flex flex-wrap gap-3 justify-end w-[90%] lg:w-[60%] xl:w-[50%] ">
           {cate.map((item, i) => (
             <div
-              className="relative w-[90%] sm:w-[47%] group"
+              className="relative w-[95%] sm:w-[47%] group"
               key={i}
               data-aos="zoom-in"
               data-aos-delay={i * 100}

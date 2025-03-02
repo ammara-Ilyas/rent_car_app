@@ -11,7 +11,7 @@ const CarListings = () => {
     inventory,
     forFilteredInventory,
     setInventory,
-    setforFilteredInventory,
+    setForFilteredInventory,
   } = useCarContext();
 
   useEffect(() => {
@@ -20,6 +20,7 @@ const CarListings = () => {
       offset: 100, // Offset from the top before animation starts
     });
   }, []);
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
@@ -27,25 +28,20 @@ const CarListings = () => {
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
   };
+  const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const categories = [
-    "All",
-    "Luxury Cars",
-    "Electric Cars",
-    "Compact Cars",
-    "Off-Road",
-    "SUVs",
-  ];
-
+  useEffect(() => {
+    const cate = Array.from(new Set(inventory?.map((car) => car.category)));
+    console.log("categories in inventory", cate);
+    setCategories(["All", ...cate]);
+  }, [inventory]);
   const handleFilter = (category) => {
     if (category === "All") {
-      setforFilteredInventory(inventory);
+      setForFilteredInventory(inventory);
     } else {
-      const filteredCars = inventory.filter(
-        (car) => car.categoryName == category
-      );
-      setforFilteredInventory(filteredCars);
+      const filteredCars = inventory.filter((car) => car.category == category);
+      setForFilteredInventory(filteredCars);
     }
     setActiveCategory(category);
 
@@ -66,7 +62,7 @@ const CarListings = () => {
           Lorem Ipsum is{" "}
           <span className=" text-red-500 ">Simply Dummy Text</span>
         </h2>
-        <div className="flex justify-center space-x-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {categories.map((category, i) => (
             <Button
               data-aos="zoom-out"
@@ -85,12 +81,12 @@ const CarListings = () => {
         </div>
       </div>
 
-      <div className="flex flex-col w-[80%] mx-auto flex-wrap justify-center gap-2">
+      <div className="flex flex-col w-[95%] sm:w-[80%] mx-auto flex-wrap justify-center gap-2">
         {/* Car Listings */}
-        <div className="flex w-[80%] mx-auto flex-wrap justify-center gap-6">
+        <div className="flex w-[99%] sm:w-[80%] md:w-[95%] xl:w-[80%] mx-auto flex-wrap justify-center gap-6">
           {currentItems.map((car, index) => (
             <div
-              className="w-[30%] "
+              className="w-[80%] md:w-[45%] lg:w-[30%] "
               key={index}
               data-aos="zoom-in-up"
               data-aos-delay={100}
@@ -101,7 +97,7 @@ const CarListings = () => {
         </div>
 
         {/* Pagination */}
-        <div className=" flex justify-end mr-28">
+        <div className=" flex justify-end mr-0 md:mr-28">
           {forFilteredInventory.length > itemsPerPage && (
             <div className="flex justify-center mt-6">
               <Pagination

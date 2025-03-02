@@ -8,10 +8,10 @@ import Image from "next/image";
 export default function Team() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      easing: "ease-in-out", // Animation easing
-      offset: 100, // Offset from the top before animation starts
-      delay: 0, // Delay in milliseconds
+      duration: 1000,
+      easing: "ease-in-out",
+      offset: 100,
+      delay: 0,
     });
   }, []);
   const team = [
@@ -51,17 +51,17 @@ export default function Team() {
     },
   ];
   return (
-    <div className="flex flex-col items-center font-semibold  font-sans my-8">
+    <div className="flex flex-col items-center font-semibold font-sans my-8">
       <p>Lorem Ipsum is simply dummy text</p>
       <h2 className="text-3xl font-bold mb-4">
         Our <span className=" text-red-500 font-sans ">Team</span>
       </h2>
-      <section className="py-6 flex flex-row items-center justify-center gap-4 w-[80%] mx-auto">
+      <section className="py-6 flex flex-wrap flex-row items-center  justify-center gap-4 w-[80%] sm:w-[95%] xl:w-[80%] mx-auto">
         {team.map((item, i) => (
           <div
             data-aos="zoom-in"
             key={i}
-            className="w-[60%] text-center relative bg-white group  rounded-lg shadow-lg  overflow-hidden  transition-transform duration-500 ease-in-out transform hover:scale-105"
+            className="w-[70%] sm:w-[40%] md:w-[23%] text-center relative bg-white group  rounded-lg shadow-lg  overflow-hidden  transition-transform duration-500 ease-in-out transform hover:scale-105"
           >
             <Image
               src={item.image}
@@ -72,18 +72,18 @@ export default function Team() {
             />
 
             {/* Social Media Icons */}
-            <div className="flex justify-center gap-4 -bottom-16 absolute left-0 group-hover:bottom-1 duration-500 transition-transform  ease-in-out  w-full rounded-md ">
+            <div className="flex  bg-black/50  justify-center gap-4 -bottom-16 absolute left-0 group-hover:bottom-1 duration-200 transition-all  ease-in-out  w-full rounded-b-md">
               {icon.map((item, i) => (
                 <Link
                   key={i}
                   href={item.link}
-                  className="text-red-500 hover:text-red-700 bg-red-700 rounded-md py-1 px-[8px] flex items-center justify-center transition-transform duration-500"
+                  className="text-red-500 hover:text-red-700  rounded-md py-1 px-[8px] flex items-center justify-center transition-all ease-in-out duration-200"
                 >
                   <span
-                    className=" text-black text-[18px] duration-500 bg-white p-1 rounded-md"
+                    className=" text-black text-[18px] duration-500 bg-white p-1 px-[6px] rounded-md"
                     style={{ transition: "transform 0.5s ease-in-out" }}
                     onMouseEnter={(e) =>
-                      (e.currentTarget.style.transform = "rotateY(360deg)")
+                      (e.currentTarget.style.transform = "rotateY(180deg)")
                     }
                     onMouseLeave={(e) =>
                       (e.currentTarget.style.transform = "rotateY(0deg)")

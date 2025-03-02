@@ -7,7 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const BlogSlider = () => {
   const [blogs, setBlogs] = useState([]);
-  const NEXT_PUBLIC_API_URL = "http://localhost:5000";
+  const NEXT_PUBLIC_API_URL = "http://localhost:3000";
 
   useEffect(() => {
     AOS.init({
@@ -35,13 +35,13 @@ const BlogSlider = () => {
       <h2 className="text-3xl font-bold mb-4">
         Our <span className=" text-red-500 font-sans ">Blogs</span>
       </h2>
-      <div className="w-[80%] mx-auto flex gap-4 mt-7">
+      <div className="w-[80%] md:w-[98%] xl:w-[80%] mx-auto flex-wrap justify-center  flex gap-4 md:gap-2 xl:gap-4 mt-7">
         {blogs.map((item, i) => (
           <div
             data-aos="zoom-in-down"
             data-aos-delay={i * 200}
             key={i}
-            className="max-w-xs rounded overflow-hidden shadow-lg bg-white hover:scale-110 transition-transform duration-500 ease-in-out"
+            className="w-[90%] sm:w-[40%] md:w-[32%] xl:w-[30%] rounded overflow-hidden shadow-lg bg-white hover:scale-110 transition-transform duration-500 ease-in-out"
           >
             <Image
               className="w-full h-48 object-cover"
