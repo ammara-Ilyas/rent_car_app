@@ -8,11 +8,12 @@ export default function FAQAccordion() {
   const [openIndexes, setOpenIndexes] = useState([]);
   const [faqs, setFaqs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const NEXT_PUBLIC_API_URL = "http://localhost:5000";
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/data/faqs.json");
+        const res = await fetch(`${NEXT_PUBLIC_API_URL}/data/faqs.json`);
         const data = await res.json();
         // console.log("Faqs", data.faqs);
         setFaqs(data.faqs);

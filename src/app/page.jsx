@@ -25,13 +25,13 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <CarShowcase />
-      <CarCategories />
+      {/* <CarCategories /> */}
       <CarListings />
-      <CarService />
+      {/* <CarService />
       <PopularCars />
       <WhyChooseUs />
       <Team />
-      <BlogSlier />
+      <BlogSlier /> */}
     </div>
   );
 }

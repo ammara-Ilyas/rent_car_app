@@ -7,16 +7,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const BlogSlider = () => {
   const [blogs, setBlogs] = useState([]);
+  const NEXT_PUBLIC_API_URL = "http://localhost:5000";
+
   useEffect(() => {
     AOS.init({
-      easing: "ease-in-out", // Animation easing
-      offset: 100, // Offset from the top before animation starts
+      easing: "ease-in-out",
+      offset: 100,
     });
   }, []);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/data/blog.json");
+        const response = await fetch(`${NEXT_PUBLIC_API_URL}/data/blog.json`);
         let data = await response.json();
         console.log("data", data);
         setBlogs(data);

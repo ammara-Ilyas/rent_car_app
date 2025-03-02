@@ -16,10 +16,8 @@ const CarListings = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
       easing: "ease-in-out",
       offset: 100, // Offset from the top before animation starts
-      delay: 0,
     });
   }, []);
   const [currentPage, setCurrentPage] = useState(1);
@@ -69,9 +67,10 @@ const CarListings = () => {
           <span className=" text-red-500 ">Simply Dummy Text</span>
         </h2>
         <div className="flex justify-center space-x-4">
-          {categories.map((category) => (
+          {categories.map((category, i) => (
             <Button
-              data-aos="flip-left"
+              data-aos="zoom-out"
+              delay={200 * i}
               key={category}
               variant="contained"
               onClick={() => handleFilter(category)}
@@ -90,7 +89,12 @@ const CarListings = () => {
         {/* Car Listings */}
         <div className="flex w-[80%] mx-auto flex-wrap justify-center gap-6">
           {currentItems.map((car, index) => (
-            <div className="w-[30%]" key={index}>
+            <div
+              className="w-[30%] "
+              key={index}
+              data-aos="zoom-in-up"
+              data-aos-delay={100}
+            >
               <CarCard car={car} />
             </div>
           ))}

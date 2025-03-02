@@ -4,24 +4,25 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const CarCard = ({ car }) => {
-  useEffect(() => {
-    AOS.init({
-      easing: "ease-out", // Animation easing
-      offset: 100, // Offset from the top before animation starts
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     easing: "ease-out", // Animation easing
+  //     offset: 100, // Offset from the top before animation starts
+  //   });
+  // }, []);
+  console.log("car images", car.images[0]);
 
   return (
     <div
-      data-aos="fade-up"
-      data-aos-delay={200}
+      // data-aos="fade-up"
+      // data-aos-delay={200}
       className="shadow-lg rounded-lg overflow-hidden w-[100%] "
       // style={{ margin: "10px", flex: "1 0 auto" }}
     >
       {/* Image Section */}
       <div className="relative">
         <Image
-          src={car.image}
+          src={car.images[1]}
           alt={car.brand}
           className="w-full h-48 object-cover "
           width={200}
@@ -37,11 +38,13 @@ const CarCard = ({ car }) => {
 
       {/* Content Section */}
       <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-800">{car.brand}</h3>
+        <h3 className="text-lg font-semibold text-gray-800">
+          {car.categoryName}
+        </h3>
         {/* Details Section */}
         <div className="flex items-center gap-2 text-sm text-gray-700 mt-2">
           <span>🚗 Auto</span>
-          <span>👨‍👩‍👧‍👦 5 Persons</span>
+          <span>👨‍👩‍👧‍👦 {car.capacity} Persons</span>
           <span>📅 {car.year}</span>
           <span>⛽ {car.fuelType}</span>
         </div>

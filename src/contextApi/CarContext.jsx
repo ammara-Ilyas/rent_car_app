@@ -12,7 +12,7 @@ export function CarProvider({ children, inventoryData = [] }) {
   useEffect(() => {
     if (inventoryData.length) {
       console.log("Inventory in context:", inventoryData);
-      localStorage.setItem("inventory", JSON.stringify(inventoryData)); // Fix: Store as JSON string
+      localStorage.setItem("inventory", JSON.stringify(inventoryData));
       setInventory(inventoryData);
       setForFilteredInventory(inventoryData);
     }

@@ -3,98 +3,101 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Button from "@/components/miniWidgets/Button";
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
-  // Toggle function to handle the navbar's display
+  // Toggle function to open/close mobile menu
   const handleNav = () => {
-    setNav(true);
+    setNav(!nav);
   };
-  const links = [
-    {
-      nav: "home",
-      link: "/",
-    },
-    {
-      nav: "inventory",
-      link: "/inventory",
-    },
-    {
-      nav: "about",
-      link: "/about",
-    },
-    { nav: "faqs", link: "/faq" },
 
-    {
-      nav: "login",
-      link: "/login",
-    },
+  // Navbar Links
+  const links = [
+    { nav: "home", link: "/" },
+    { nav: "inventory", link: "/inventory" },
+    { nav: "about", link: "/about" },
+    { nav: "faqs", link: "/faq" },
+    { nav: "login", link: "/login" },
   ];
+
   return (
-    <nav className="flex items-center sticky top-0 right-0 z-50 px-16 justify-between p-4 shadow-md bg-white ">
+    <nav className="flex items-center justify-between w-full px-6 md:px-12 lg:px-16 py-4 shadow-md bg-white  fixed top-0 left-0 right-0 z-50">
       {/* Logo */}
       <div className="text-2xl font-bold text-black">
         <span className="text-red-500">R</span>umble
       </div>
 
-      <div className=" justify-between items-center gap-6 hidden md:flex">
-        {/* Links */}
-        <div className=" transition-all ease-in-out duration-500   space-x-4 items-center  flex">
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center space-x-6">
+        {/* Navigation Links */}
+        <div className=" space-x-1 lg:space-x-3 flex items-center">
           {links.map((page, i) => (
             <Link
               key={i}
               href={page.link}
-              className="px-4 py-2  hover:bg-red-600 hover:text-white transition-all ease-in-out duration-500   rounded-md font-semibold capitalize"
+              className="px-4 py-2 hover:bg-red-600 hover:text-white transition duration-300 rounded-md font-semibold capitalize"
             >
               {page.nav}
             </Link>
           ))}
         </div>
+        {/* Booking Button */}
         <Button text="Booking" />
       </div>
-      {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className="block md:hidden">
-        <AiOutlineMenu size={20} className="text-black" />
+
+      {/* Mobile Menu Button */}
+      <div className="md:hidden" onClick={handleNav}>
+        <AiOutlineMenu size={24} className="text-black cursor-pointer" />
       </div>
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`${
-          nav
-            ? "fixed md:hidden left-0 top-0 w-[80%] h-full border-r border-r-gray-900  ease-in-out duration-500"
-            : "ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]"
-        } bg-black z-50  pt-8`}
+        className={`fixed top-0 left-0 w-[75%] sm:w-[60%] h-full bg-black text-white transition-transform duration-500 ease-in-out ${
+          nav ? "translate-x-0" : "-translate-x-full"
+        } z-50`}
       >
-        {/* Mobile Logo */}
-        {/* Logo */}
-        <div className=" flex items-center justify-between px-10 ">
+        {/* Mobile Header */}
+        <div className="flex items-center justify-between px-6 py-4 bg-gray-900">
+          {/* Mobile Logo */}
           <div className="text-2xl font-bold bg-white p-2 rounded px-3 text-black">
             <span className="text-red-500">R</span>umble
           </div>
+          {/* Close Button */}
           <AiOutlineClose
-            size={20}
-            className="text-white"
-            onClick={() => setNav(false)}
+            size={24}
+            className="text-white cursor-pointer"
+            onClick={handleNav}
           />
         </div>
-        {/* Mobile Navigation Items */}
-        <div className="flex flex-col gap-2 mt-9">
-          {" "}
+
+        {/* Mobile Navigation Links */}
+        <div className="flex flex-col mt-6 space-y-4 px-6">
           {links.map((item, i) => (
             <Link
               key={i}
               href={item.link}
-              className="p-4 border-b rounded-xl text-white hover:bg-red-600 duration-300 hover:text-white cursor-pointer border-gray-600  font-semibold capitalize"
+              className="p-4 border-b border-gray-600 text-lg font-semibold capitalize hover:bg-red-600 transition duration-300 rounded-lg"
+              onClick={handleNav} // Close menu on click
             >
               {item.nav}
             </Link>
           ))}
         </div>
-        <div className="ml-8 mt-16">
-          {" "}
+
+        {/* Mobile Booking Button */}
+        <div className="px-6 mt-6">
           <Button text="Booking" />
-        </div>{" "}
+        </div>
       </div>
+
+      {/* Overlay to close menu when clicking outside */}
+      {nav && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 z-40 md:hidden"
+          onClick={handleNav}
+        />
+      )}
     </nav>
   );
 };

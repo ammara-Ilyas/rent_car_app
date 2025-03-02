@@ -18,10 +18,8 @@ const InventoryList = () => {
   };
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      easing: "ease-in-out", // Animation easing
-      offset: 100, // Offset from the top before animation starts
-      delay: 0, // Delay in milliseconds
+      easing: "ease-in-out",
+      delay: 0,
     });
   }, []);
   // console.log("data in list", inventory, "filter", forFilteredInventory);
@@ -38,7 +36,6 @@ const InventoryList = () => {
     <div className="p-4 max-w-screen-lg mx-auto w-full mt-28">
       <SortComponent setIsGrid={setIsGrid} isGrid={isGrid} />
 
-      {/* Loading Indicator */}
       {loading ? (
         <div className="flex justify-center items-center h-64">
           <CircularProgress />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Chip } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -6,11 +6,24 @@ import { useCarContext } from "@/contextApi/CarContext";
 import Heading from "../../miniWidgets/Heading";
 import CarCard from "@/components/miniWidgets/CarCard";
 const CarCategories = () => {
-  const { inventory } = useCarContext();
+  const [categories, setCategories] = useState([]);
+  const NEXT_PUBLIC_API_URL = "http://localhost:5000";
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        `${NEXT_PUBLIC_API_URL}/data/categories.json`
+      );
+      const cate = await response.json();
+      setCategories(cate);
+      console.log("categories in categories compoennes", cate);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div
-      className="pt-16 pb-36  bg-black bg-opacity-40 px-28"
+      className="pt-16 pb-36 bg-black bg-opacity-40 px-8 sm:px-10 md:px-28"
       style={{
         paddingBottom: "30px",
         position: "relative",
@@ -68,14 +81,15 @@ const CarCategories = () => {
         slidesToSlide={1}
         swipeable
       >
-        {inventory.map((car, index) => (
-          <div
-            className="w-[95%] bg-white bg-opacity-80 rounded-lg overflow-hidden"
-            key={index}
-          >
-            <CarCard car={car} />
-          </div>
-        ))}
+        {categories &&
+          categories.map((car, index) => (
+            <div
+              className="w-[100%] md:w-[95%]  bg-white bg-opacity-80 rounded-lg overflow-hidden"
+              key={index}
+            >
+              <CarCard car={car} />
+            </div>
+          ))}
       </Carousel>
     </div>
   );

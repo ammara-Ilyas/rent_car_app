@@ -18,11 +18,11 @@
     "available": true,
     "tags": ["Fuel-efficient", "Family-friendly"],
     "images": [
-      "data/images/inventory/car_01.png",
-      "data/images/inventory/car_02.png",
-      "data/images/inventory/car_03.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_05.png"
+      "/images/inventory/car_01.png",
+      "/images/inventory/car_02.png",
+      "/images/inventory/car_03.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_05.png"
     ],
     "description": "A reliable and fuel-efficient sedan with advanced safety features.",
     "detail": "",
@@ -67,11 +67,11 @@
     "available": true,
     "tags": ["Kid-friendly", "Adult-focused"],
     "images": [
-      "data/images/inventory/car_06.png",
-      "data/images/inventory/car_07.png",
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_09.png",
-      "data/images/inventory/car_10.png"
+      "/images/inventory/car_06.png",
+      "/images/inventory/car_07.png",
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_09.png",
+      "/images/inventory/car_10.png"
     ],
     "description": "A premium family SUV with a spacious interior and sporty styling.",
     "detail": "",
@@ -116,11 +116,11 @@
     "available": true,
     "tags": ["Fuel-efficient", "Affordable"],
     "images": [
-      "data/images/inventory/car_10.png",
-      "data/images/inventory/car_11.png",
-      "data/images/inventory/car_12.png",
-      "data/images/inventory/car_01.png",
-      "data/images/inventory/car_02.png"
+      "/images/inventory/car_10.png",
+      "/images/inventory/car_11.png",
+      "/images/inventory/car_12.png",
+      "/images/inventory/car_01.png",
+      "/images/inventory/car_02.png"
     ],
     "description": "A compact sedan known for its efficiency, reliability, and modern design.",
     "detail": "",
@@ -165,11 +165,11 @@
     "available": true,
     "tags": ["Muscle car", "High performance"],
     "images": [
-      "data/images/inventory/car_02.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_06.png",
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_09.png"
+      "/images/inventory/car_02.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_06.png",
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_09.png"
     ],
     "description": "An American muscle car with powerful engines and aggressive styling.",
     "detail": "",
@@ -214,11 +214,11 @@
     "available": true,
     "tags": ["Spacious", "Powerful"],
     "images": [
-      "data/images/inventory/car_03.png",
-      "data/images/inventory/car_02.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_01.png"
+      "/images/inventory/car_03.png",
+      "/images/inventory/car_02.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_01.png"
     ],
     "description": "A full-size SUV with ample space, towing capacity, and advanced safety features.",
     "detail": "",
@@ -263,11 +263,11 @@
     "available": true,
     "tags": ["Luxury", "Performance"],
     "images": [
-      "data/images/inventory/car_11.png",
-      "data/images/inventory/car_10.png",
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_09.png",
-      "data/images/inventory/car_04.png"
+      "/images/inventory/car_11.png",
+      "/images/inventory/car_10.png",
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_09.png",
+      "/images/inventory/car_04.png"
     ],
     "description": "A high-performance luxury SUV with advanced driving dynamics and technology.",
     "detail": "",
@@ -312,11 +312,11 @@
     "available": true,
     "tags": ["Luxury", "Comfort"],
     "images": [
-      "data/images/inventory/car_12.png",
-      "data/images/inventory/car_10.png",
-      "data/images/inventory/car_06.png",
-      "data/images/inventory/car_01.png",
-      "data/images/inventory/car_02.png"
+      "/images/inventory/car_12.png",
+      "/images/inventory/car_10.png",
+      "/images/inventory/car_06.png",
+      "/images/inventory/car_01.png",
+      "/images/inventory/car_02.png"
     ],
     "description": "A premium luxury sedan with advanced technology, comfort, and high performance.",
     "detail": "",
@@ -357,11 +357,11 @@
     "available": true,
     "tags": ["Electric", "Autopilot"],
     "images": [
-      "data/images/inventory/car_09.png",
-      "data/images/inventory/car_10.png",
-      "data/images/inventory/car_03.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_06.png"
+      "/images/inventory/car_09.png",
+      "/images/inventory/car_10.png",
+      "/images/inventory/car_03.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_06.png"
     ],
     "description": "A fully electric sedan with autonomous driving capabilities and long-range performance.",
     "detail": "",
@@ -406,11 +406,11 @@
     "available": true,
     "tags": ["Luxury", "Technology"],
     "images": [
-      "data/images/inventory/car_07.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_03.png",
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_02.png"
+      "/images/inventory/car_07.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_03.png",
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_02.png"
     ],
     "description": "A luxurious and technology-packed SUV with Quattro all-wheel drive.",
     "detail": "",
@@ -450,11 +450,11 @@
     "available": true,
     "tags": ["Family-friendly", "Powerful"],
     "images": [
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_03.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_02.png",
-      "data/images/inventory/car_01.png"
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_03.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_02.png",
+      "/images/inventory/car_01.png"
     ],
     "description": "A versatile midsize SUV with excellent performance and a spacious interior.",
     "detail": "",
@@ -499,11 +499,11 @@
     "available": true,
     "tags": ["Reliable", "Fuel-efficient"],
     "images": [
-      "data/images/inventory/car_07.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_05.png",
-      "data/images/inventory/car_02.png",
-      "data/images/inventory/car_11.png"
+      "/images/inventory/car_07.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_05.png",
+      "/images/inventory/car_02.png",
+      "/images/inventory/car_11.png"
     ],
     "description": "A dependable midsize SUV with advanced safety features and a hybrid option.",
     "detail": "",
@@ -548,11 +548,11 @@
     "available": true,
     "tags": ["Luxury", "Hybrid"],
     "images": [
-      "data/images/inventory/car_03.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_06.png",
-      "data/images/inventory/car_07.png",
-      "data/images/inventory/car_02.png"
+      "/images/inventory/car_03.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_06.png",
+      "/images/inventory/car_07.png",
+      "/images/inventory/car_02.png"
     ],
     "description": "A luxurious hybrid SUV with advanced safety features and a smooth ride.",
     "detail": "",
@@ -597,11 +597,11 @@
     "available": true,
     "tags": ["Off-road", "Adventure"],
     "images": [
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_05.png",
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_02.png",
-      "data/images/inventory/car_01.png"
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_05.png",
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_02.png",
+      "/images/inventory/car_01.png"
     ],
     "description": "A rugged yet refined SUV with excellent off-road capability and luxury features.",
     "detail": "",
@@ -648,11 +648,11 @@
     "available": true,
     "tags": ["Spacious", "Comfortable"],
     "images": [
-      "data/images/inventory/car_11.png",
-      "data/images/inventory/car_10.png",
-      "data/images/inventory/car_07.png",
-      "data/images/inventory/car_06.png",
-      "data/images/inventory/car_02.png"
+      "/images/inventory/car_11.png",
+      "/images/inventory/car_10.png",
+      "/images/inventory/car_07.png",
+      "/images/inventory/car_06.png",
+      "/images/inventory/car_02.png"
     ],
     "description": "A stylish midsize SUV offering comfort, technology, and family-friendly features.",
     "detail": "",
@@ -697,11 +697,11 @@
     "available": true,
     "tags": ["Spacious", "Towing Power"],
     "images": [
-      "data/images/inventory/car_12.png",
-      "data/images/inventory/car_07.png",
-      "data/images/inventory/car_06.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_02.png"
+      "/images/inventory/car_12.png",
+      "/images/inventory/car_07.png",
+      "/images/inventory/car_06.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_02.png"
     ],
     "description": "A full-size SUV with a powerful V8 engine and ample cargo space.",
     "detail": "",
@@ -732,11 +732,11 @@
     "available": true,
     "tags": ["Luxury", "Performance"],
     "images": [
-      "data/images/inventory/car_11.png",
-      "data/images/inventory/car_10.png",
-      "data/images/inventory/car_05.png",
-      "data/images/inventory/car_06.png",
-      "data/images/inventory/car_04.png"
+      "/images/inventory/car_11.png",
+      "/images/inventory/car_10.png",
+      "/images/inventory/car_05.png",
+      "/images/inventory/car_06.png",
+      "/images/inventory/car_04.png"
     ],
     "description": "A luxury midsize SUV with advanced technology and dynamic handling.",
     "detail": "",
@@ -767,11 +767,11 @@
     "available": true,
     "tags": ["Family-friendly", "Reliable"],
     "images": [
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_07.png",
-      "data/images/inventory/car_03.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_02.png"
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_07.png",
+      "/images/inventory/car_03.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_02.png"
     ],
     "description": "A three-row SUV with off-road capability and a comfortable interior.",
     "detail": "",
@@ -802,11 +802,11 @@
     "available": true,
     "tags": ["Luxury", "Spacious"],
     "images": [
-      "data/images/inventory/car_10.png",
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_09.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_03.png"
+      "/images/inventory/car_10.png",
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_09.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_03.png"
     ],
     "description": "A full-size luxury SUV with advanced comfort features and powerful performance.",
     "detail": "",
@@ -837,11 +837,11 @@
     "available": true,
     "tags": ["Adventure", "All-Wheel Drive"],
     "images": [
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_06.png",
-      "data/images/inventory/car_02.png",
-      "data/images/inventory/car_09.png"
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_06.png",
+      "/images/inventory/car_02.png",
+      "/images/inventory/car_09.png"
     ],
     "description": "A rugged all-wheel-drive crossover SUV built for adventure and safety.",
     "detail": "",
@@ -872,11 +872,11 @@
     "available": true,
     "tags": ["Luxury", "Performance"],
     "images": [
-      "data/images/inventory/car_10.png",
-      "data/images/inventory/car_11.png",
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_09.png",
-      "data/images/inventory/car_02.png"
+      "/images/inventory/car_10.png",
+      "/images/inventory/car_11.png",
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_09.png",
+      "/images/inventory/car_02.png"
     ],
     "description": "A premium midsize SUV with all-wheel drive, cutting-edge technology, and a powerful engine.",
     "detail": "",
@@ -907,11 +907,11 @@
     "available": true,
     "tags": ["Safety", "Comfort"],
     "images": [
-      "data/images/inventory/car_11.png",
-      "data/images/inventory/car_12.png",
-      "data/images/inventory/car_10.png",
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_03.png"
+      "/images/inventory/car_11.png",
+      "/images/inventory/car_12.png",
+      "/images/inventory/car_10.png",
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_03.png"
     ],
     "description": "A luxury SUV focused on safety, comfort, and eco-friendly hybrid technology.",
     "detail": "",
@@ -942,11 +942,11 @@
     "available": true,
     "tags": ["Electric", "Autopilot"],
     "images": [
-      "data/images/inventory/car_07.png",
-      "data/images/inventory/car_05.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_06.png",
-      "data/images/inventory/car_03.png"
+      "/images/inventory/car_07.png",
+      "/images/inventory/car_05.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_06.png",
+      "/images/inventory/car_03.png"
     ],
     "description": "A high-performance electric SUV with falcon-wing doors and cutting-edge technology.",
     "detail": "",
@@ -977,11 +977,11 @@
     "available": true,
     "tags": ["Luxury", "Off-road"],
     "images": [
-      "data/images/inventory/car_07.png",
-      "data/images/inventory/car_08.png",
-      "data/images/inventory/car_02.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_01.png"
+      "/images/inventory/car_07.png",
+      "/images/inventory/car_08.png",
+      "/images/inventory/car_02.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_01.png"
     ],
     "description": "A premium off-road capable SUV with luxury comfort and high-tech features.",
     "detail": "",
@@ -1012,11 +1012,11 @@
     "available": true,
     "tags": ["Luxury", "Performance"],
     "images": [
-      "data/images/inventory/car_01.png",
-      "data/images/inventory/car_02.png",
-      "data/images/inventory/car_03.png",
-      "data/images/inventory/car_04.png",
-      "data/images/inventory/car_05.png"
+      "/images/inventory/car_01.png",
+      "/images/inventory/car_02.png",
+      "/images/inventory/car_03.png",
+      "/images/inventory/car_04.png",
+      "/images/inventory/car_05.png"
     ],
     "description": "A high-performance luxury SUV with powerful engine options and a refined interior.",
     "detail": "",

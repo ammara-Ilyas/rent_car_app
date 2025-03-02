@@ -73,13 +73,13 @@ const HomeFilter = () => {
               );
             });
 
-            return !hasConflict; // No conflicts, car is available
+            return !hasConflict;
           }
 
-          return true; // No bookings, car is available
+          return true;
         }
 
-        return true; // No dates provided, car is available
+        return true;
       })();
 
       // // Filter by Kid-friendly and Adult-focused cars
@@ -156,7 +156,7 @@ const HomeFilter = () => {
   return (
     <div
       // data-aos="flip-left"
-      className="absolute  top-[60%] lg:right-24 lg:top-20 bg-red-700 bg-opacity-90 rounded-md p-6 shadow-lg w-96"
+      className=" bg-red-700 bg-opacity-90 rounded-md p-6 shadow-lg w-80  sm:w-96"
     >
       <h2 className="text-xl font-bold text-white mb-4">
         Search for Rental Cars

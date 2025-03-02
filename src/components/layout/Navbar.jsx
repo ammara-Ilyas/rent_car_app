@@ -31,7 +31,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="flex items-center md:px-16 lg:px-28 justify-between p-4 shadow-md bg-black bg-opacity-10">
+    <nav className="flex items-center md:px-16  lg:px-28 justify-between p-4 shadow-md bg-black bg-opacity-10">
       {/* Logo */}
       <div className="text-2xl font-bold bg-white p-2 rounded px-3 text-black">
         <span className="text-red-500">R</span>umble

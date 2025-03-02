@@ -7,10 +7,9 @@ import "aos/dist/aos.css";
 const CarShowcase = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      easing: "ease-in-out", // Animation easing
-      offset: 100, // Offset from the top before animation starts
-      delay: 0, // Delay in milliseconds
+      duration: 1000,
+      easing: "ease-in-out",
+      offset: 100,
     });
   }, []);
   const cate = [
@@ -27,17 +26,17 @@ const CarShowcase = () => {
       title: "Mini",
     },
     {
-      img: "/images/categories/car_04.avif",
+      img: "/images/categories/car_07.avif",
       title: "MERCEDES BENZ",
     },
   ];
   return (
-    <section className=" text-white py-16 pl-24 pr-2 ">
-      <div className="w-[90%] mx-auto flex items-center gap-6 rounded-md px-8 py-1 bg-black">
-        {/* Title Section */}
+    <section className=" text-white py-16 lg:pl-24 mt-96 sm:mt-72 lg:mt-0 pr-2 ">
+      <div className=" w-[90%] lg:w-[95%] xl:w-[90%] mx-auto flex flex-col lg:flex-row items-center gap-6 rounded-md px-8 py-1 bg-black">
         <div
-          className=" flex flex-col justify-between  w-[50%]"
+          className=" flex flex-col justify-between w-[80%] mt-5 md:mt-0 md:w-[70%]"
           data-aos="zoom-in"
+          data-aos-delay={300}
         >
           <p className="uppercase font-semibold mt-0 ">
             Help you to find your next car easily
@@ -45,7 +44,7 @@ const CarShowcase = () => {
           <h1 className="text-4xl font-bold">
             Subaru <span className="text-red-500">Impreza</span>
           </h1>
-          <hr className="text-white w-[30%] mt-2" />
+          <hr className="w-[60%] mt-2 h-[2px] bg-gradient-to-r from-red-500 via-white to-red-500 border-0 animate-pulse " />
           <p className="my-2 mt-4">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fuga
             ab dolores rerum ut aliquam molestiae, commodi libero accusamus
@@ -73,9 +72,14 @@ const CarShowcase = () => {
         </div>
 
         {/* Car Grid */}
-        <div className="flex flex-wrap gap-3 justify-end w-[50%] ">
+        <div className="flex flex-wrap gap-3 justify-end w-[90%] lg:w-[60%] xl:w-[50%] ">
           {cate.map((item, i) => (
-            <div className="relative w-[47%] group" key={i} data-aos="zoom-in">
+            <div
+              className="relative w-[90%] sm:w-[47%] group"
+              key={i}
+              data-aos="zoom-in"
+              data-aos-delay={i * 100}
+            >
               <Image
                 src={item.img}
                 alt={item.title}
