@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { InputLabel, MenuItem, Select, TextField } from "@mui/material";
 const BookingSummary = ({ product, setDuration }) => {
-  console.log("product in summary", product);
+  // console.log("product in summary", product);
   const [summaryData, setSummaryData] = useState({
     pickUpLocation: "",
     dropOffLocation: "",
@@ -43,7 +43,9 @@ const BookingSummary = ({ product, setDuration }) => {
   }, [summaryData.pickUpDate, summaryData.dropOffDate]);
   return (
     <div className="bg-white shadow-md rounded-lg ">
-      <h2 className="text-lg font-bold bg-black text-white py-2 px-4 rounded-t-lg"></h2>
+      <h2 className="text-lg font-bold bg-black text-white py-2 px-4 rounded-t-lg">
+        Booking Detail
+      </h2>
       <div className="flex justify-between items-center font-semibold mb-4 p-4">
         <div className=" w-[45%]">
           <Select

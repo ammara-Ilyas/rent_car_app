@@ -19,18 +19,20 @@ export const ProductImage = () => {
   };
 
   return (
-    <div className="flex flex-col ">
-      {/* Main Image */}
-      <div className="w-full   h-64 md:h-96 overflow-hidden rounded-lg shadow-lg">
+    <div className="flex flex-col border shawdow-lg ">
+      {/* Main Image */}{" "}
+      <h2 className="text-lg font-bold bg-black text-white py-2 px-4 rounded-t-lg">
+        Listing Photo
+      </h2>
+      <div className="w-full px-4 h-64 mt-5 md:h-96 overflow-hidden ">
         <Image
           src={images[currentImageIndex]}
           alt={`Slide ${currentImageIndex + 1}`}
-          className="w-full h-full object-cover transition-transform duration-500"
+          className="w-full h-full object-cover transition-transform rounded-lg duration-500"
           width={500}
           height={500}
         />
       </div>
-
       {/* Thumbnails */}
       <div className="mt-4 w-full flex gap-2 overflow-x-auto scrollbar-hide">
         {images.map((image, index) => (

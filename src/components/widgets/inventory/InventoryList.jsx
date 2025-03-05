@@ -33,7 +33,7 @@ const InventoryList = () => {
   }, [inventory, currentPage]);
 
   return (
-    <div className="p-4 max-w-screen-lg mx-auto w-full mt-28">
+    <div className="p-4 max-w-screen-lg mx-auto  w-full ">
       <SortComponent setIsGrid={setIsGrid} isGrid={isGrid} />
 
       {loading ? (
@@ -43,19 +43,17 @@ const InventoryList = () => {
       ) : (
         <div
           className={`${
-            isGrid === "grid" ? "md:grid-cols-2 lg:grid-cols-3" : ""
-          } grid grid-cols-1 gap-6 `}
+            isGrid === "grid" ? "sm:grid-cols-2 xl:grid-cols-3" : ""
+          } grid grid-cols-1 gap-2 lg:gap-6 `}
         >
           {inventory ? (
             currentItems.map((car) => (
               <div
-                // data-aos="zoom-in-down"
                 className={`${
-                  isGrid === "grid" ? "w-[310px] flex-col " : "w-[90%] flex-row"
+                  isGrid === "grid" ? "w-[90%] flex-col " : "w-[90%] flex-row"
                 } flex w-[310px] mx-auto rounded-lg shadow-lg overflow-hidden`}
                 key={car.id}
               >
-                {/* Image Section */}
                 <div
                   className={`${
                     isGrid === "grid" ? "w-full " : "w-[40%] "
@@ -80,7 +78,7 @@ const InventoryList = () => {
                   } p-4 flex flex-col justify-between`}
                 >
                   <div className="flex justify-between items-center">
-                    <h3 className="text-lg font-bold">Toyota Camry SE 350</h3>
+                    <h3 className="text-lg font-bold">{car.brand}</h3>
                     <Rating
                       name="read-only"
                       value={car.rating}

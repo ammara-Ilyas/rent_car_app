@@ -38,13 +38,13 @@ const Navbar = () => {
       </div>
 
       {/* Links */}
-      <div className="hidden md:flex">
+      <div className="hidden md:flex space-x-1 xl:space-x-2">
         <>
           {links.map((page, i) => (
             <Link
               key={i}
               href={page.link}
-              className="px-4 py-2 text-white hover:bg-red-600 duration-300 border-b cursor-pointer border-gray-600  rounded-xl font-semibold capitalize"
+              className="px-3 xl:px-4 flex items-center justify-center  text-white hover:bg-red-600 duration-300 cursor-pointer border-gray-600  rounded-xl font-semibold capitalize"
             >
               {page.nav}
             </Link>

@@ -11,7 +11,7 @@ const Page = () => {
       <HeroSection />
 
       {/* Main Content */}
-      <div className="flex p-4 space-x-4">
+      <div className="flex p-4  flex-col md:flex-row  mt-32 md:mt-24  space-x-4">
         <FilterComponent />
         <InventoryList />
       </div>

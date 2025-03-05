@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   TextField,
   Button,
@@ -11,9 +11,11 @@ import {
 import { useRouter } from "next/navigation";
 import Hero from "@/components/miniWidgets/Hero";
 import { useCarContext } from "@/contextApi/CarContext";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 const HeroSection = () => {
+  const searchResultsRef = useRef(null);
   const router = useRouter();
   const {
     inventory,
@@ -46,6 +48,14 @@ const HeroSection = () => {
       ...prevData,
       [name]: value,
     }));
+    console.log("serach filter in inventory page", searchFilter);
+
+    // if (searchResultsRef.current) {
+    //   searchResultsRef.current.scrollIntoView({
+    //     behavior: "smooth",
+    //     block: "start",
+    //   });
+    // }
   };
 
   // // Filter inventory based on search filters
@@ -161,22 +171,22 @@ const HeroSection = () => {
 
       {/* Content */}
       <div
-        data-aos="zoom-in-down"
-        className="absolute top-24 left-60 z-10 flex flex-col items-center
+        // data-aos="zoom-in-down"
+        className=" w-[80%] xl:w-[50%] mx-auto absolute left-[10%] sm:left-[10%] xl:left-[25%] -bottom-28 md:-bottom-20 flex flex-col items-center
         justify-center h-full text-white space-y-8"
       >
         {/* Subscription Tabs */}
 
         {/* Search Form */}
         <form
-          className="bg-white rounded-md shadow-lg p-6 w-4/5 lg:w-2/3"
+          className="bg-white rounded-md shadow-lg p-6 w-4/5 md:w-2/3"
           onSubmit={(e) => {
             e.preventDefault();
             filterInventory();
           }}
         >
           <h2 className="text-xl font-bold text-black mb-4">Search for Cars</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid  grid-cols-2 sm:grid-cols-3 gap-4">
             {/* Pickup Location */}
             <TextField
               label="Pick Up Location"

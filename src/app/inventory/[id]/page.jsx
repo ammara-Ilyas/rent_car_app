@@ -4,14 +4,19 @@ import { useParams } from "next/navigation";
 import ProductDetail from "@/components/widgets/booking/ProductDetail";
 import BlogSlider from "@/components/widgets/home/BlogSlider";
 import Hero from "@/components/miniWidgets/Hero";
+import { CircularProgress } from "@mui/material";
 
 export default function Page() {
   const param = useParams();
   console.log("id", param?.id);
 
-  // if (!param?.id) {
-  //   return <p>Loading...</p>; // Fallback UI while `param.id` is not available
-  // }
+  if (!param?.id) {
+    return (
+      <p>
+        <CircularProgress />
+      </p>
+    );
+  }
 
   return (
     <>
