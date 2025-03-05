@@ -24,7 +24,7 @@ export default function FAQAccordion() {
       }
     };
     fetchData();
-  }, [faqs]);
+  }, []);
 
   const toggleAccordion = (index) => {
     setOpenIndexes((prevIndexes) =>
