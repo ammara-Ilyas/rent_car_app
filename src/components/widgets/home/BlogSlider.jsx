@@ -7,7 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const BlogSlider = () => {
   const [blogs, setBlogs] = useState([]);
-  const NEXT_PUBLIC_API_URL = "http://localhost:3000";
+  const NEXT_PUBLIC_API_URL = "https://car-rent-appl.netlify.app/";
 
   useEffect(() => {
     AOS.init({

@@ -2,7 +2,91 @@
 import { TextField, Button, Checkbox, FormControlLabel } from "@mui/material";
 import { FaFacebook } from "react-icons/fa";
 import Link from "next/link";
+const NEXT_PUBLIC_BASE_URL = "https://restweb.azurewebsites.net/";
 export default function LoginPage() {
+  const router = useRouter();
+  // State for form data
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLoginData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent form reload on submit
+    setIsLoading(true); // Show loading state
+
+    // Validate email and password
+    if (!loginData.email || !loginData.password) {
+      toast.error("Email and password are required.", {
+        position: "top-right",
+      });
+      setIsLoading(false); // Stop loading
+      return;
+    }
+
+    try {
+      // Send POST request using fetch
+      const response = await fetch(`${NEXT_PUBLIC_BASE_URL}/users/login/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: loginData.email,
+          password: loginData.password,
+        }),
+      });
+      console.log("response", response);
+
+      // Check if the response is OK
+      if (response.ok) {
+        const user = await response.json(); // Parse JSON response
+
+        localStorage.setItem("token", JSON.stringify(user.user_id));
+        console.log("response user", user);
+
+        toast.success(`${user.message}! 🎉`, {
+          position: "top-right",
+        });
+
+        // Reset form fields
+        setLoginData({
+          email: "",
+          password: "",
+        });
+
+        // Navigate to the home page
+        router.push("/");
+      } else {
+        // Handle errors (e.g., 400 Bad Request)
+        const errorData = await response.json();
+        console.log("error bad ", errorData);
+
+        toast.error(errorData.detail || "Invalid email or password.", {
+          position: "top-right",
+        });
+      }
+    } catch (error) {
+      // Handle network or unexpected errors
+      console.error("Network error:", error);
+      toast.error("Network error. Please try again.", {
+        position: "top-right",
+      });
+    } finally {
+      setIsLoading(false); // Stop loading
+    }
+  };
+
   return (
     <>
       {" "}
@@ -15,11 +99,14 @@ export default function LoginPage() {
             <p className="text-gray-600 mb-6">Login to access your account</p>
 
             {/* Input Fields */}
-            <form>
+            <form onSubmit={handleSubmit}>
               <TextField
                 label="Email"
                 variant="outlined"
                 fullWidth
+                name="email"
+                value={loginData.email}
+                onChange={handleChange}
                 className="mb-4"
                 type="email"
               />
@@ -27,6 +114,9 @@ export default function LoginPage() {
                 label="Password"
                 variant="outlined"
                 fullWidth
+                name="password"
+                value={loginData.password}
+                onChange={handleChange}
                 className="mb-4"
                 type="password"
               />

@@ -7,7 +7,7 @@ import Heading from "../../miniWidgets/Heading";
 import CarCard from "@/components/miniWidgets/CarCard";
 const CarCategories = () => {
   const [categories, setCategories] = useState([]);
-  const NEXT_PUBLIC_API_URL = "http://localhost:3000";
+  const NEXT_PUBLIC_API_URL = "https://car-rent-appl.netlify.app/";
 
   useEffect(() => {
     const fetchData = async () => {
