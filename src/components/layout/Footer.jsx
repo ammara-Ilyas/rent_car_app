@@ -3,8 +3,8 @@ import { TextField, Button } from "@mui/material";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-black text-white py-8 w-full px-8 ">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {/* About Us Section */}
         <div>
           <h2 className="text-xl font-bold mb-4">About Us</h2>
@@ -69,7 +69,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="mt-8 text-center border-t border-gray-700 pt-4">
         <p className="text-sm">
-          &copy; Example 2023. All Rights Reserved. Designed by YourName.
+          &copy; Example 2025. All Rights Reserved. Designed by Ammara Ilyas.
         </p>
       </div>
     </footer>
