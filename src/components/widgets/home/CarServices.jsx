@@ -2,11 +2,12 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import Heading from "@/components/miniWidgets/Heading";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import NEXT_PUBLIC_API_URL from "@/components/layout/Url";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const CarService = () => {
   const [carServices, setCarServives] = useState([]);
-  const NEXT_PUBLIC_API_URL = "https://car-rent-appl.netlify.app/";
+  // const NEXT_PUBLIC_API_URL = "https://car-rent-appl.netlify.app/";
 
   useEffect(() => {
     AOS.init({

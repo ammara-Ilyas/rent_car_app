@@ -5,9 +5,10 @@ import { CiHeart } from "react-icons/ci";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import NEXT_PUBLIC_API_URL from "@/components/layout/Url";
 const BlogSlider = () => {
   const [blogs, setBlogs] = useState([]);
-  const NEXT_PUBLIC_API_URL = "https://car-rent-appl.netlify.app/";
+  // const NEXT_PUBLIC_API_URL = "https://car-rent-appl.netlify.app";
 
   useEffect(() => {
     AOS.init({

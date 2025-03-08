@@ -5,9 +5,10 @@ import "react-multi-carousel/lib/styles.css";
 import { useCarContext } from "@/contextApi/CarContext";
 import Heading from "../../miniWidgets/Heading";
 import CarCard from "@/components/miniWidgets/CarCard";
+import NEXT_PUBLIC_API_URL from "@/components/layout/Url";
 const CarCategories = () => {
   const [categories, setCategories] = useState([]);
-  const NEXT_PUBLIC_API_URL = "https://car-rent-appl.netlify.app/";
+  // const NEXT_PUBLIC_API_URL = "https://car-rent-appl.netlify.app/";
 
   useEffect(() => {
     const fetchData = async () => {
