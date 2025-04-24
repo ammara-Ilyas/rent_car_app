@@ -115,17 +115,6 @@ export default function LoginPage() {
               </p>
             </div>
           </form>
-          <div className="mt-6 text-center">
-            <p className="text-gray-600 mb-4">Or login with</p>
-            <div className="flex justify-center gap-4">
-              <Button variant="outlined" className="flex-1">
-                <FaFacebook />
-              </Button>
-              <Button variant="outlined" className="flex-1">
-                {/* Replace with Google login icon */}
-              </Button>
-            </div>
-          </div>
         </div>
         <div
           className="w-full lg:w-1/2 h-[584px] rounded-r-lg p-2"

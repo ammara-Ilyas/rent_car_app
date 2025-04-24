@@ -200,19 +200,6 @@ const SignupPage = () => {
               Login
             </Link>
           </p>
-
-          {/* Social Login Buttons */}
-          <div className="mt-6 text-center">
-            <p className="text-gray-600 mb-4">Or sign up with</p>
-            <div className="flex justify-center gap-4">
-              <Button variant="outlined" className="flex-1">
-                <FaFacebook />
-              </Button>
-              <Button variant="outlined" className="flex-1">
-                <FaGoogle />
-              </Button>
-            </div>
-          </div>
         </div>
 
         {/* Image Section */}
